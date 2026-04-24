@@ -1,0 +1,933 @@
+<?xml version="1.0"?>
+
+<SpecialStructures>
+
+
+    <!-- *****************************************************************  -->
+    <!-- *****************************************************************  -->
+    <!-- ************************   Republic    **************************  -->
+    <!-- *****************************************************************  -->
+    <!-- *****************************************************************  -->
+    
+    <SpecialStructure Name="Rep_Tech_Ground_Infantry_1">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_1_UNLOCKS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_1_UNLOCKS_PARTIAL
+            AOTR_TEXT_EMPTY
+            AOTR_TECH_GROUND_E_LEGIONS_1_SPECIALFORCES_1
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_INFANTRY_1.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>10000</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_Infantry_2">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_2_UNLOCKS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_2_UNLOCKS_PARTIAL
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_INFANTRY_2.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>7500</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_Infantry_3">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_3_UNLOCKS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_INFANTRY_3_UNLOCKS_PARTIAL
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_INFANTRY_3.TGA</Icon_Name>
+
+        <Affiliation>Neutral</Affiliation>
+        <!-- <Build_Cost_Credits>10000</Build_Cost_Credits> -->
+        <!-- <Build_Time_Seconds>1</Build_Time_Seconds> -->
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_Legions_1">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_1_UNLOCKS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_1_UNLOCKS_PARTIAL
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_LEGIONS_1.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>5000</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_Legions_2">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_2_UNLOCKS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_2_UNLOCKS_PARTIAL
+            AOTR_TEXT_EMPTY
+            AOTR_TECH_GROUND_E_INFANTRY_1
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_LEGIONS_2.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>7500</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_Legions_3">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_3_TOOL
+            <!-- AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_3_UNLOCKS -->
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LEGIONS_3_UNLOCKS_PARTIAL
+            AOTR_TEXT_EMPTY
+            AOTR_TECH_GROUND_E_INFANTRY_1
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_LEGIONS_3.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>7500</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_SpecialForces_1">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_SPECIALFORCES_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_SPECIALFORCES_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_SPECIALFORCES_1_UNLOCKS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_SPECIALFORCES_1_UNLOCKS_PARTIAL
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_SPECIALFORCES_1.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>5000</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_SpecialForces_2">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_SPECIALFORCES_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_SPECIALFORCES_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_SPECIALFORCES_2_UNLOCKS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_SPECIALFORCES_2_UNLOCKS_PARTIAL
+            AOTR_TEXT_EMPTY
+            AOTR_TECH_GROUND_E_INFANTRY_1
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_SPECIALFORCES_2.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>7500</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_Vehicle_1">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_1_UNLOCKS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_1_UNLOCKS_PARTIAL
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_VEHICLE_1.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>10000</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+
+        <AI_Combat_Power>50</AI_Combat_Power>
+        <Autoresolve_Health>50</Autoresolve_Health>
+        <Damage>0</Damage>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_Vehicle_2">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_2_UNLOCKS
+            <!-- AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_2_UNLOCKS_PARTIAL -->
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_VEHICLE_2.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>10000</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+
+        <AI_Combat_Power>50</AI_Combat_Power>
+        <Autoresolve_Health>50</Autoresolve_Health>
+        <Damage>0</Damage>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Rep_Tech_Ground_Vehicle_3">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_GROUND_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_3_UNLOCKS
+            <!-- AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_GROUND_E_LIGHTVEHICLE_3_UNLOCKS_PARTIAL -->
+        </Encyclopedia_Text>
+
+        <Icon_Name>I_BUTTON_GROUNDTECH_REP_VEHICLE_3.TGA</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>12500</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+
+        <AI_Combat_Power>50</AI_Combat_Power>
+        <Autoresolve_Health>50</Autoresolve_Health>
+        <Damage>0</Damage>
+    </SpecialStructure>
+
+
+    <!-- *****************************************************************  -->
+    <!-- *****************************************************************  -->
+    <!-- ************************ Confederacy   **************************  -->
+    <!-- *****************************************************************  -->
+    <!-- *****************************************************************  -->
+
+    <SpecialStructure Name="CIS_Tech_Template">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Affiliation>Neutral</Affiliation>
+        <Land_Model_Name>UB_PALACE.ALO</Land_Model_Name>
+
+        <Obstacle_Proxy_Type>  </Obstacle_Proxy_Type>
+
+        <SFXEvent_Build_Started>UHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>UHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>UHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+        <!-- Intentially called "Speech_Death_Star_Build_" (with trailing underscore)  for varied countdown references in SpeechEvents.xml -->
+        <Build_Speech_Countdowns>Speech_Death_Star_Build_</Build_Speech_Countdowns>
+        <Build_Music_Completed>Galactic_Space_Tech_Rebel_Complete_Music_Event</Build_Music_Completed>
+
+        <SFXEvent_Unit_Under_Attack> UHD_Research_Under_Attack </SFXEvent_Unit_Under_Attack>
+        <SFXEvent_Unit_Lost> UHD_Research_Under_Attack </SFXEvent_Unit_Lost>
+        <Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+        <Build_Countdown_Text_RGBA>58, 58, 255, 255</Build_Countdown_Text_RGBA>
+
+        <Destroy_When_Used_As_Corruption_Prereq>No</Destroy_When_Used_As_Corruption_Prereq>
+
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+
+        <AI_Combat_Power>50</AI_Combat_Power>
+        <Autoresolve_Health>50</Autoresolve_Health>
+        <Damage>0</Damage>
+        <Build_Cost_Credits>1</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_TradeFed_1">
+        <Variant_Of_Existing_Type>CIS_Tech_Template</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_1_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_1_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Build_Countdown_Text_ID> TEXT_CIS_TRADEFED_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>i_button_groundtech_cis_tradefed_1.TGA</Icon_Name>
+        
+        <HardPoints>
+			HP_PALACE_COMM_ARRAY,
+			HP_PALACE_POWER_GEN
+		</HardPoints>
+
+        <Affiliation>Rebel</Affiliation>
+        <Build_Cost_Credits>12000</Build_Cost_Credits>
+        <Build_Time_Seconds>450</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_TradeFed_2">
+        <Variant_Of_Existing_Type>CIS_Tech_TradeFed_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_2_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_2_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_groundtech_cis_tradefed_2.TGA</Icon_Name>
+
+        <Build_Cost_Credits>14000</Build_Cost_Credits>
+        <Build_Time_Seconds>600</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_TradeFed_3">
+        <Variant_Of_Existing_Type>CIS_Tech_TradeFed_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_3_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_TRADEFED_3_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_groundtech_cis_tradefed_3.TGA</Icon_Name>
+
+        <Build_Cost_Credits>16000</Build_Cost_Credits>
+        <Build_Time_Seconds>750</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_CommerceGuild_1">
+        <Variant_Of_Existing_Type>CIS_Tech_Template</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_1_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_1_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Build_Countdown_Text_ID> TEXT_CIS_COMMERCE_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>i_button_groundtech_cis_commerceguild_1.TGA</Icon_Name>
+        
+        <HardPoints>
+			HP_PALACE_COMM_ARRAY,
+			HP_PALACE_POWER_GEN
+		</HardPoints>
+
+        <Affiliation>Rebel</Affiliation>
+        <Build_Cost_Credits>12000</Build_Cost_Credits>
+        <Build_Time_Seconds>450</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_CommerceGuild_2">
+        <Variant_Of_Existing_Type>CIS_Tech_CommerceGuild_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_2_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_2_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_groundtech_cis_commerceguild_2.TGA</Icon_Name>
+
+        <Build_Cost_Credits>14000</Build_Cost_Credits>
+        <Build_Time_Seconds>600</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_CommerceGuild_3">
+        <Variant_Of_Existing_Type>CIS_Tech_CommerceGuild_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_3_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_COMMERCE_3_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_groundtech_cis_commerceguild_3.TGA</Icon_Name>
+
+        <Build_Cost_Credits>16000</Build_Cost_Credits>
+        <Build_Time_Seconds>750</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_TechnoUnion_1">
+        <Variant_Of_Existing_Type>CIS_Tech_Template</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_1_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_1_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Build_Countdown_Text_ID> TEXT_CIS_TECHNOUNION_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>i_button_groundtech_cis_TechnoUnion_1.TGA</Icon_Name>
+        
+        <HardPoints>
+			HP_PALACE_COMM_ARRAY,
+			HP_PALACE_POWER_GEN
+		</HardPoints>
+
+        <Affiliation>Rebel</Affiliation>
+        <Build_Cost_Credits>12000</Build_Cost_Credits>
+        <Build_Time_Seconds>450</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_TechnoUnion_2">
+        <Variant_Of_Existing_Type>CIS_Tech_TechnoUnion_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_2_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_2_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_groundtech_cis_TechnoUnion_2.TGA</Icon_Name>
+
+        <Build_Cost_Credits>14000</Build_Cost_Credits>
+        <Build_Time_Seconds>600</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_TechnoUnion_3">
+        <Variant_Of_Existing_Type>CIS_Tech_TechnoUnion_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_3_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_TECHNOUNION_3_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_groundtech_cis_TechnoUnion_3.TGA</Icon_Name>
+
+        <Build_Cost_Credits>16000</Build_Cost_Credits>
+        <Build_Time_Seconds>750</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_BankingClan_1">
+        <Variant_Of_Existing_Type>CIS_Tech_Template</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_1_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_1_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Build_Countdown_Text_ID> TEXT_CIS_BANKINGCLAN_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>i_button_groundtech_cis_BankingClan_1.TGA</Icon_Name>
+        
+        <HardPoints>
+			HP_PALACE_COMM_ARRAY,
+			HP_PALACE_POWER_GEN
+		</HardPoints>
+
+        <Affiliation>Rebel</Affiliation>
+        <Build_Cost_Credits>12000</Build_Cost_Credits>
+        <Build_Time_Seconds>450</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_BankingClan_2">
+        <Variant_Of_Existing_Type>CIS_Tech_BankingClan_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_2_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_2_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_groundtech_cis_BankingClan_2.TGA</Icon_Name>
+
+        <Build_Cost_Credits>14000</Build_Cost_Credits>
+        <Build_Time_Seconds>600</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="CIS_Tech_BankingClan_3">
+        <Variant_Of_Existing_Type>CIS_Tech_BankingClan_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_3_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_CIS_BANKINGCLAN_3_UNLOCKS_GROUND
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_groundtech_cis_BankingClan_3.TGA</Icon_Name>
+
+        <Build_Cost_Credits>16000</Build_Cost_Credits>
+        <Build_Time_Seconds>750</Build_Time_Seconds>
+    </SpecialStructure>
+
+
+
+
+
+
+
+    <SpecialStructure Name="Underworld_Tech_Template">
+        <Variant_Of_Existing_Type>T_GroundTech</Variant_Of_Existing_Type>
+
+        <Affiliation>Neutral</Affiliation>
+
+        <Obstacle_Proxy_Type>  </Obstacle_Proxy_Type>
+
+        <Encyclopedia_Unit_Class>AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH</Encyclopedia_Unit_Class>
+
+        <SFXEvent_Build_Started>UHD_Tech_Upgrade_Progress</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>UHD_Tech_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>UHD_Tech_Upgrade_Complete</SFXEvent_Build_Complete>
+        <!-- Intentially called "Speech_Death_Star_Build_" (with trailing underscore)  for varied countdown references in SpeechEvents.xml -->
+        <Build_Speech_Countdowns>Speech_Death_Star_Build_</Build_Speech_Countdowns>
+        <Build_Music_Completed>Galactic_Xizor_Tech_Underworld_Complete_Music_Event</Build_Music_Completed>
+
+        <SFXEvent_Unit_Under_Attack> RHD_Research_Under_Attack </SFXEvent_Unit_Under_Attack>
+        <SFXEvent_Unit_Lost> RHD_Research_Under_Attack </SFXEvent_Unit_Lost>
+        <Build_Countdown_Timer> Yes </Build_Countdown_Timer>
+        <Build_Countdown_Text_RGBA>247, 201, 13, 255</Build_Countdown_Text_RGBA>
+
+        <Destroy_When_Used_As_Corruption_Prereq>No</Destroy_When_Used_As_Corruption_Prereq>
+
+        <Score_Cost_Credits> 2000</Score_Cost_Credits>
+        <Sabotage_Cost_Credits>99000</Sabotage_Cost_Credits>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+        <Tech_Level>0</Tech_Level>
+
+        <AI_Combat_Power>50</AI_Combat_Power>
+        <Autoresolve_Health>50</Autoresolve_Health>
+        <Damage>0</Damage>
+
+        <Lua_Script>ObjectScript_ExclusiveTech</Lua_Script>
+    </SpecialStructure>
+
+
+    <SpecialStructure Name="Underworld_Tech_Xizor_1">
+        <Variant_Of_Existing_Type>Underworld_Tech_Template</Variant_Of_Existing_Type>
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_XIZOR_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_1_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_1_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_1_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Build_Countdown_Text_ID> TEXT_XIZOR_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>I_BUTTON_TECH_XIZOR_1.TGA</Icon_Name>
+        
+        <Land_Model_Name>UB_PALACE.ALO</Land_Model_Name>
+        <HardPoints>
+			HP_PALACE_COMM_ARRAY,
+			HP_PALACE_POWER_GEN
+		</HardPoints>
+
+        <Affiliation>Underworld</Affiliation>
+        <Build_Cost_Credits>5000</Build_Cost_Credits>
+        <Build_Time_Seconds>300</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_Xizor_2">
+        <Variant_Of_Existing_Type>Underworld_Tech_Xizor_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_XIZOR_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_2_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_2_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_2_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Icon_Name>I_BUTTON_TECH_XIZOR_2.TGA</Icon_Name>
+
+        <Build_Cost_Credits>7500</Build_Cost_Credits>
+        <Build_Time_Seconds>450</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_Xizor_3">
+        <Variant_Of_Existing_Type>Underworld_Tech_Xizor_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_XIZOR_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_3_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_3_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_3_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_XIZOR_EXCLUSIVE
+        </Encyclopedia_Text>
+
+        <Build_Countdown_Text_ID> TEXT_XIZOR_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>I_BUTTON_TECH_XIZOR_3.TGA</Icon_Name>
+
+        <Build_Cost_Credits>10000</Build_Cost_Credits>
+        <Build_Time_Seconds>600</Build_Time_Seconds>
+    </SpecialStructure>
+
+
+    <SpecialStructure Name="Underworld_Tech_Hutts_1">
+        <Variant_Of_Existing_Type>Underworld_Tech_Template</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_HUTTS_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_1_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_1_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_1_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_EXCLUSIVE
+        </Encyclopedia_Text>
+
+        <Land_Model_Name>W_HUTTPALACE.alo</Land_Model_Name>
+        <Scale_Factor>1.0</Scale_Factor>
+
+        <Build_Countdown_Text_ID> TEXT_HUTTS_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>I_BUTTON_TECH_HUTTS_1.TGA</Icon_Name>
+        <Build_Music_Completed>Galactic_Hutts_Tech_Underworld_Complete_Music_Event</Build_Music_Completed>
+
+        <Affiliation>Underworld</Affiliation>
+        <Build_Cost_Credits>5000</Build_Cost_Credits>
+        <Build_Time_Seconds>300</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_Hutts_2">
+        <Variant_Of_Existing_Type>Underworld_Tech_Hutts_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_HUTTS_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_2_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_2_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_2_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Icon_Name>I_BUTTON_TECH_HUTTS_2.TGA</Icon_Name>
+
+        <Build_Cost_Credits>7500</Build_Cost_Credits>
+        <Build_Time_Seconds>450</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_Hutts_3">
+        <Variant_Of_Existing_Type>Underworld_Tech_Hutts_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_HUTTS_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_3_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_3_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_3_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_HUTTS_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Icon_Name>I_BUTTON_TECH_HUTTS_3.TGA</Icon_Name>
+
+        <Build_Cost_Credits>10000</Build_Cost_Credits>
+        <Build_Time_Seconds>600</Build_Time_Seconds>
+    </SpecialStructure>
+
+
+    <SpecialStructure Name="Underworld_Tech_Zann_1">
+        <Variant_Of_Existing_Type>Underworld_Tech_Template</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_ZANN_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_1_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_1_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_1_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Build_Countdown_Text_ID> TEXT_ZANN_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>I_BUTTON_TECH_ZANN_1.TGA</Icon_Name>
+        <Build_Music_Completed>Galactic_Zann_Tech_Underworld_Complete_Music_Event</Build_Music_Completed>
+
+        <Land_Model_Name>UB_PALACE.ALO</Land_Model_Name>
+        <HardPoints>
+			HP_PALACE_COMM_ARRAY,
+			HP_PALACE_POWER_GEN
+		</HardPoints>
+
+        <Affiliation>Underworld</Affiliation>
+        <Build_Cost_Credits>5000</Build_Cost_Credits>
+        <Build_Time_Seconds>300</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_Zann_2">
+        <Variant_Of_Existing_Type>Underworld_Tech_Zann_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_ZANN_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_2_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_2_UNLOCKS_GROUND
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Icon_Name>I_BUTTON_TECH_ZANN_2.TGA</Icon_Name>
+
+        <Build_Cost_Credits>7500</Build_Cost_Credits>
+        <Build_Time_Seconds>450</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_Zann_3">
+        <Variant_Of_Existing_Type>Underworld_Tech_Zann_1</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_ZANN_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_3_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_3_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_3_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_ZANN_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Icon_Name>I_BUTTON_TECH_ZANN_3.TGA</Icon_Name>
+
+        <Build_Cost_Credits>10000</Build_Cost_Credits>
+        <Build_Time_Seconds>600</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_IG88_1">
+        <Variant_Of_Existing_Type>Underworld_Tech_Template</Variant_Of_Existing_Type>
+
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_IG88_1</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+             AOTR_TEXT_GLOBAL_TECH_U_IG88_1_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_1_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_1_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_1_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Build_Countdown_Text_ID> TEXT_IG88_TECH_COUNTDOWN_TIMER </Build_Countdown_Text_ID>
+        <Icon_Name>I_BUTTON_TECH_IG88_1.TGA</Icon_Name>
+        <Build_Music_Completed>Galactic_IG88_Tech_Underworld_Complete_Music_Event</Build_Music_Completed>
+
+        <Land_Model_Name>UB_DROIDWORKS.ALO</Land_Model_Name>
+
+        <Affiliation>Underworld</Affiliation>
+        <Build_Cost_Credits>5000</Build_Cost_Credits>
+        <Build_Time_Seconds>300</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_IG88_2">
+        <Variant_Of_Existing_Type>Underworld_Tech_IG88_1</Variant_Of_Existing_Type>
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_IG88_2</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_2_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_2_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_2_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_2_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Icon_Name>I_BUTTON_TECH_IG88_2.TGA</Icon_Name>
+
+        <Build_Cost_Credits>7500</Build_Cost_Credits>
+        <Build_Time_Seconds>450</Build_Time_Seconds>
+    </SpecialStructure>
+
+    <SpecialStructure Name="Underworld_Tech_IG88_3">
+        <Variant_Of_Existing_Type>Underworld_Tech_IG88_1</Variant_Of_Existing_Type>
+        <Text_ID>AOTR_TEXT_GLOBAL_TECH_U_IG88_3</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_TEXT_ENCYCLOPEDIA_CLASS_GLOBAL_LEADER_TECH
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_3_TOOL
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_3_UNLOCKS
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_3_UNLOCKS_GROUND
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_3_UNLOCKS_MERCS
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_GLOBAL_TECH_U_IG88_EXCLUSIVE
+        </Encyclopedia_Text>
+        <Icon_Name>I_BUTTON_TECH_IG88_3.TGA</Icon_Name>
+
+        <Build_Cost_Credits>10000</Build_Cost_Credits>
+        <Build_Time_Seconds>600</Build_Time_Seconds>
+    </SpecialStructure>
+
+
+
+
+
+
+</SpecialStructures>
