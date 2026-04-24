@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FighterUnits>
+
+    <!-- External Hard Dependencies: SpaceUnit_Bomber_Shielded_Template -->
+    <!-- External Soft Dependencies:  -->
+
+    <!-- Unit Definition(s) -->
+    <SpaceUnit Name="Rep_ARC_170">
+        <Variant_Of_Existing_Type>SpaceUnit_Bomber_Shielded_Template</Variant_Of_Existing_Type>
+        <Text_ID>TEXT_UNIT_ARC170</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_SPACE_CLASS_FIGHTER
+            AOTR_SPACE_ROLE_SCOUT_HEAVY_FIGHTER
+            AOTR_MANUFACTURER_INCOM
+            AOTR_TEXT_EMPTY
+            TEXT_TOOLTIP_ARC170
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_SHIELD_ANTILC_SLOW_25
+            AOTR_SPACE_HULL_FIGHTER_50
+            AOTR_SPACE_MOVEMENT_LOW_TURN_325
+            AOTR_SPACE_SENSOR_3000
+            AOTR_SPACE_RANGE_1250_750
+            AOTR_SPACE_WEAPONS_ARC170
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_ABILITIES_SFOILS_RETREAT
+            AOTR_SPACE_PASSIVES_ASTROMECH_COPILOT
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_arc_170_Rep.tga</Icon_Name>
+        <No_Colorization_Color> 237, 78, 78, 255 </No_Colorization_Color>
+        <Space_Model_Name>Rep_ARC_170.ALO</Space_Model_Name>
+        <Max_Speed>3.15</Max_Speed>
+        <Min_Speed>2.4</Min_Speed>
+        <Max_Rate_Of_Turn>0.9</Max_Rate_Of_Turn>
+        <Max_Lift>0.9</Max_Lift>
+        <Max_Thrust>1.0</Max_Thrust>
+        <Max_Rate_Of_Roll>0.9</Max_Rate_Of_Roll>
+        <Bank_Turn_Angle>90</Bank_Turn_Angle>
+        <Hyperspace>Yes</Hyperspace>
+        <Hyperspace_Speed>1.2</Hyperspace_Speed>
+        <Maintenance_Cost>0.1</Maintenance_Cost>
+
+        <Affiliation>Empire</Affiliation>
+
+        <AI_Combat_Power>165</AI_Combat_Power>
+        <Autoresolve_Health>40</Autoresolve_Health>
+
+        <Shield_Points>35</Shield_Points>
+        <Tactical_Health>120</Tactical_Health>
+        <Shield_Refresh_Rate>0.125</Shield_Refresh_Rate>
+
+        <Armor_Type>Armor_Space_Fighter</Armor_Type>
+        <Shield_Armor_Type>Shield_Space_AntiLC_Fighter</Shield_Armor_Type>
+
+        <HardPoints>
+            HP_Arc_170_Lasers,
+            HP_Arc_170_Torpedo,
+            HP_Arc_170_Aft_Lasers
+        </HardPoints>
+
+        <Space_FOW_Reveal_Range>3000</Space_FOW_Reveal_Range>
+        <Dense_FOW_Reveal_Range_Multiplier>1.0</Dense_FOW_Reveal_Range_Multiplier>
+
+        <Death_Explosions>Fighter_Explosion_Space</Death_Explosions>
+        <Death_SFXEvent_Start_Die>Unit_X_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+        <Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
+
+        <SFXEvent_Select>Clone_Fighter_Select</SFXEvent_Select>
+        <SFXEvent_Move>Clone_Fighter_Move</SFXEvent_Move>
+        <SFXEvent_Fleet_Move>Clone_Fighter_Move</SFXEvent_Fleet_Move>
+        <SFXEvent_Attack>Clone_Fighter_Attack</SFXEvent_Attack>
+        <SFXEvent_Guard>Clone_Fighter_Guard</SFXEvent_Guard>
+        <SFXEvent_Assist_Move>Clone_Fighter_Move</SFXEvent_Assist_Move>
+        <SFXEvent_Assist_Attack>Clone_Fighter_Attack</SFXEvent_Assist_Attack>
+        <SFXEvent_Move_Into_Asteroid_Field>Clone_Fighter_Move</SFXEvent_Move_Into_Asteroid_Field>
+        <SFXEvent_Move_Into_Nebula>Clone_Fighter_Move</SFXEvent_Move_Into_Nebula>
+
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_LASER, Clone_Fighter_Attack_Guns</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_MISSILE, Clone_Fighter_Attack_Guns</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_TORPEDO, Clone_Fighter_Attack_Guns</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_ION_CANNON, Clone_Fighter_Attack_Ions</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_SHIELD_GENERATOR, Clone_Fighter_Attack_Shields</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_ENGINE, Clone_Fighter_Attack_Engines</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_FIGHTER_BAY, Clone_Fighter_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_GRAVITY_WELL, Clone_Fighter_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_DUMMY_ART, Clone_Fighter_Attack</SFXEvent_Attack_Hardpoint>
+
+        <SFXEvent_Health_Low_Warning>Clone_Fighter_Low_Health</SFXEvent_Health_Low_Warning>
+        <SFXEvent_Health_Critical_Warning>Clone_Fighter_Critical_Health</SFXEvent_Health_Critical_Warning>
+        <SFXEvent_Enemy_Damaged_Health_Low_Warning>Clone_Fighter_Enemy_Low_Health</SFXEvent_Enemy_Damaged_Health_Low_Warning>
+        <SFXEvent_Enemy_Damaged_Health_Critical_Warning>Clone_Fighter_Enemy_Critical_Health</SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+        
+
+        <SFXEvent_Ambient_Moving>ARC170_Fly_By</SFXEvent_Ambient_Moving>
+        <SFXEvent_Ambient_Moving_Min_Delay_Seconds>5</SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+        <SFXEvent_Ambient_Moving_Max_Delay_Seconds>10</SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+        <SFXEvent_Engine_Cinematic_Focus_Loop>ARC170_Fly_By</SFXEvent_Engine_Cinematic_Focus_Loop>
+
+        <CategoryMask>Fighter | AntiLight</CategoryMask>
+        <Targeting_Priority_Set>Space_Fighter_AntiLight</Targeting_Priority_Set>
+
+        <Unit_Abilities_Data SubObjectList="Yes">
+            <Unit_Ability>
+                <Type>SPOILER_LOCK</Type>
+                <Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 1.5f</Mod_Multiplier>
+                <Mod_Multiplier>SPEED_MULTIPLIER, 1.25</Mod_Multiplier>
+                <SFXEvent_GUI_Unit_Ability_Activated></SFXEvent_GUI_Unit_Ability_Activated>
+                <SFXEvent_GUI_Unit_Ability_Deactivated>Clone_Fighter_SFoils</SFXEvent_GUI_Unit_Ability_Deactivated>
+                <Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SPOILER_LOCK_RETREAT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_SPOILER_LOCK_RETREAT_DESCRIPTION</Alternate_Description_Text>
+            </Unit_Ability>
+            <Unit_Ability>
+                <Type>HUNT</Type>
+            </Unit_Ability>
+        </Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+            <Force_Healing_Ability Name="Repair_Fighter_Light">
+                <Activation_Style>Space_Automatic</Activation_Style>
+                <Heal_Range>0.0</Heal_Range>
+                <Heal_Percent>0.01</Heal_Percent>
+                <Heal_Amount>0.0</Heal_Amount>
+                <Heal_Interval_In_Secs>3.0</Heal_Interval_In_Secs>
+                <Single_Target_Heal>No</Single_Target_Heal>
+                <Applicable_Unit_Categories/>
+                <Applicable_Unit_Types/>
+                <SFXEvent_Target_Affected/>
+                <Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+                <Owner_Light_Effect_Type/>
+                <Owner_Light_Effect_Color/>
+                <Owner_Light_Effect_Color2/>
+                <Owner_Light_Effect_Duration/>
+                <Owner_Light_Effect_Pulse_Count/>
+            </Force_Healing_Ability>
+        </Abilities>
+
+        <Spin_Away_On_Death_Explosion>Fighter_Explosion_Space</Spin_Away_On_Death_Explosion>
+        <Spin_Away_On_Death_SFXEvent_Start_Die>Unit_X_Wing_Spinning_By</Spin_Away_On_Death_SFXEvent_Start_Die>
+    </SpaceUnit>
+
+    <!-- Squadron Definition(s) -->
+    <Squadron Name="Rep_ARC_170_S">
+        <Text_ID>TEXT_UNIT_ARC170_SQUAD</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_SPACE_CLASS_FIGHTER
+            AOTR_SPACE_ROLE_HEAVY_FIGHTER
+            AOTR_MANUFACTURER_INCOM
+            AOTR_TEXT_EMPTY
+            TEXT_TOOLTIP_ARC170
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_SHIELD_ANTILC_SLOW_25
+            AOTR_SPACE_HULL_FIGHTER_50
+            AOTR_SPACE_MOVEMENT_LOW_TURN_325
+            AOTR_SPACE_SENSOR_3000
+            AOTR_SPACE_RANGE_1250_750
+            AOTR_SPACE_WEAPONS_ARC170
+            AOTR_SPACE_SQUADRON_SIZE_4
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_ABILITIES_SFOILS_RETREAT
+            AOTR_SPACE_PASSIVES_ASTROMECH_COPILOT
+            AOTR_TEXT_EMPTY
+            AOTR_TECH_SPACE_E_SMALL_3
+        </Encyclopedia_Text>
+        <Encyclopedia_Good_Against/>
+        <Encyclopedia_Vulnerable_To/>
+        <Icon_Name>i_button_arc_170_Rep.tga</Icon_Name>
+        <GUI_Row>0</GUI_Row>
+        <Is_Dummy>Yes</Is_Dummy>
+        <Formation_Priority>1</Formation_Priority>
+        <Is_Escort>Yes</Is_Escort>
+        <Is_Bomber>no</Is_Bomber>
+        <Damage>384</Damage>
+        <Affiliation>Empire</Affiliation>
+        <Political_Control>0</Political_Control>
+        <AI_Combat_Power>690</AI_Combat_Power>
+        <Autoresolve_Health>192</Autoresolve_Health>
+        <Build_Cost_Credits>1</Build_Cost_Credits>
+        <Piracy_Value_Credits>25</Piracy_Value_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Tactical_Bribe_Cost>64</Tactical_Bribe_Cost>
+        <Score_Cost_Credits>64</Score_Cost_Credits>
+        <Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+        <Tech_Level>0</Tech_Level>
+        <Required_Timeline/>
+        <Required_Star_Base_Level>1</Required_Star_Base_Level>
+        <Required_Special_Structures>E_Shipyard_FighterModule</Required_Special_Structures>
+        <Build_Time_Reduced_By_Multiple_Factories>Yes</Build_Time_Reduced_By_Multiple_Factories>
+        <Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+        <SpaceBehavior>ABILITY_COUNTDOWN</SpaceBehavior>
+        <Squadron_Units>Rep_ARC_170</Squadron_Units>
+        <Squadron_Units>Rep_ARC_170</Squadron_Units>
+        <Max_Squad_Size>6</Max_Squad_Size>
+        <!-- TWO PAIR FORMATION -->
+        <Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+        <Squadron_Offsets>0.0,30.0,15.0</Squadron_Offsets>
+        <Squadron_Offsets>-90.0,-60.0,-60.0</Squadron_Offsets>
+        <Squadron_Offsets>-135.0,-105.0,-30.0</Squadron_Offsets>
+        <GUI_Model_Name>RV_Arc170.ALO</GUI_Model_Name>
+        <GUI_Distance>95</GUI_Distance>
+        <GUI_Offset>0 0 0</GUI_Offset>
+        <GUI_Velocity>45</GUI_Velocity>
+        
+        <SFXEvent_Build_Started>EHD_Build_Unit</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>Clone_Fighter_Select</SFXEvent_Build_Complete>
+
+        <FormationOrder>2</FormationOrder>
+        <Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+        <Space_FOW_Reveal_Range>1000.0</Space_FOW_Reveal_Range>
+        <Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+        <Guard_Chase_Range>200.0</Guard_Chase_Range>
+        <Idle_Chase_Range>1000.0</Idle_Chase_Range>
+        <Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+        <Property_Flags>SmallShip</Property_Flags>
+        <Autonomous_Move_Extension_Vs_Attacker>500.0</Autonomous_Move_Extension_Vs_Attacker>
+        <Unit_Abilities_Data SubObjectList="Yes">
+            <!-- Primary ability -->
+            <Unit_Ability>
+                <Type>SPOILER_LOCK</Type>
+                <Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 1.5f</Mod_Multiplier>
+                <Mod_Multiplier>SPEED_MULTIPLIER, 1.25f</Mod_Multiplier>
+                <SFXEvent_GUI_Unit_Ability_Activated></SFXEvent_GUI_Unit_Ability_Activated>
+                <SFXEvent_GUI_Unit_Ability_Deactivated>Clone_Fighter_SFoils</SFXEvent_GUI_Unit_Ability_Deactivated>
+                <Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_SPOILER_LOCK_RETREAT_NAME</Alternate_Name_Text>
+                <Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_SPOILER_LOCK_RETREAT_DESCRIPTION</Alternate_Description_Text>
+            </Unit_Ability>
+            <Unit_Ability>
+                <Type>HUNT</Type>
+            </Unit_Ability>
+        </Unit_Abilities_Data>
+        <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+        <Tactical_Build_Cost_Multiplayer>750</Tactical_Build_Cost_Multiplayer>
+        <Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+        <Tactical_Build_Prerequisites/>
+        <Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+        <!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+        <!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+        <!--<MULTIPLAYER SKIRMISH VALUES END>-->
+        <Population_Value>1</Population_Value>
+        <Space_Override_Population_Value>5</Space_Override_Population_Value>
+        <Encyclopedia_Unit_Class>AOTR_TACTICAL_POP_REQ_5</Encyclopedia_Unit_Class>
+    </Squadron>
+</FighterUnits>

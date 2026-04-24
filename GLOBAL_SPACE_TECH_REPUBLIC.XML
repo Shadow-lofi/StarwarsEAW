@@ -1,0 +1,1303 @@
+<?xml version="1.0"?>
+<!--Author MaxiM-->
+<Story>
+    <Event Name="Space_Tech_Story_Start">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>0.1</Event_Param1>
+    </Event>
+
+    <Event Name="Space_Tech_Player_Dialog">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>EMPIRE_PLAYER_SPACETECH_DIALOG</Event_Param2>
+        <Story_Dialog>DIALOG_E_SPACE_TECH</Story_Dialog>
+        <Story_Chapter>0</Story_Chapter>
+        <Story_Dialog_Popup>False</Story_Dialog_Popup>
+        <Story_Tag>Space_Tech_Tag</Story_Tag>
+    </Event>
+
+    <Event Name="Trigger_Check_Tech">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>3</Event_Param1>
+        <Prereq>Space_Tech_Story_Start</Prereq>
+        <Prereq>Check_Tech_Reset_Branch</Prereq>
+        <Branch>Check_Tech</Branch>
+    </Event>
+    <Event Name="Check_Tech_Reset_Branch">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Check_Tech</Reward_Param1>
+        <Prereq>Trigger_Check_Tech</Prereq>
+        <!-- <Prereq>STORY_LOSE_BATTLES_Check_Tech</Prereq> -->
+        <!-- <Prereq>STORY_WIN_BATTLES_Check_Tech</Prereq> -->
+        <Branch>Check_Tech</Branch>
+    </Event>
+    <!--
+    <Event Name="STORY_LOSE_BATTLES_Check_Tech">
+        <Event_Type>STORY_LOSE_BATTLES</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Event_Param2>SPACE</Event_Param2>
+        <Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+        <Perpetual>true</Perpetual>
+        <Branch>Check_Tech</Branch>
+    </Event>
+
+    <Event Name="STORY_WIN_BATTLES_Check_Tech">
+        <Event_Type>STORY_WIN_BATTLES</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        <Event_Param2>SPACE</Event_Param2>
+        <Event_Param3>FILTER_FRIENDLY_ONLY</Event_Param3>
+        <Perpetual>true</Perpetual>
+        <Branch>Check_Tech</Branch>
+    </Event>
+    -->
+
+	<!--****************************************************-->
+	<!--        Global Space Techcenter System start        -->
+	<!--****************************************************-->
+    <!--Story Construct Events start-->
+
+
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Small_1">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_1</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_1_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Small_1</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Small_2">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_2</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_2_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Small_2</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Small_3">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_3</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_3_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Small_3</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Medium_1">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_1</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_1_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Medium_1</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Medium_2">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_2</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_2_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Medium_2</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Medium_3">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_3</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_3_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Medium_3</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Large_1">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_1</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_1_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Large_1</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Large_2">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_2</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_2_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Large_2</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Space_Large_3">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_3</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_3_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Space_Large_3</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+
+
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_1">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_1</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_1_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_1</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_2">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_2</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_2_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_2</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_3">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_3</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_3</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Legions_1">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_1</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_1_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_1</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Legions_2">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_2</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_2_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_2</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Legions_3">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_3</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_3</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_1">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_SpecialForces_1</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_SpecialForces_1_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_1</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_2">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_SpecialForces_2</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_2</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_1">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_1</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_1_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_1</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_2">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_2</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_2_On</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_2</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_3">
+        <Event_Type>STORY_CONSTRUCT</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_3</Event_Param1>
+        <Event_Param2>1</Event_Param2>
+        <Event_Param3>Empire</Event_Param3>
+        <Branch>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_3</Branch>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+
+    <!--Story Construct Events end-->
+    
+    <!--Destroy and Reset Events start-->
+    <Event Name="STORY_Rep_Tech_Space_Small_1_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Small_1_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Small_1">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Small_1">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Small_1">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_1_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Small_1</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Small_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Space_Small_2_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Small_2_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Small_2">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Small_2">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Small_2">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_2_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Small_2</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Small_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Space_Small_3_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Small_3_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Small_3">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Small_3">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Small_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Small_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Small_3">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Small_3_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Small_3</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Small_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+    <Event Name="STORY_Rep_Tech_Space_Medium_1_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Medium_1_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Medium_1">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Medium_1">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Medium_1">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_1_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Medium_1</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Medium_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Space_Medium_2_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Medium_2_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Medium_2">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Medium_2">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Medium_2">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_2_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Medium_2</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Medium_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Space_Medium_3_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Medium_3_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Medium_3">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Medium_3">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Medium_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Medium_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Medium_3">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Medium_3_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Medium_3</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Medium_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Space_Large_1_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Large_1_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Large_1">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Large_1">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Large_1">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_1_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Large_1</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Large_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Space_Large_2_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Large_2_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Large_2">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Large_2">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Large_2">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_2_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Large_2</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Large_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Space_Large_3_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Space_Large_3_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Space_Large_3">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Space_Large_3">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Space_Large_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Space_Large_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Space_Large_3">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Space_Large_3_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Space_Large_3</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Space_Large_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+    <Event Name="STORY_Rep_Tech_Ground_Infantry_1_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Infantry_1_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Infantry_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Infantry_1">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Infantry_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Infantry_1">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Infantry_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Infantry_1">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_1_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Ground_Infantry_2_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Infantry_2_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Infantry_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Infantry_2">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Infantry_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Infantry_2">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Infantry_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Infantry_2">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_2_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Ground_Infantry_3_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Infantry_3_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Infantry_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Infantry_3">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Branch>Rep_Tech_Ground_Infantry_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Infantry_3">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Infantry_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Branch>Rep_Tech_Ground_Infantry_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Infantry_3">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Infantry_3_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+     <Event Name="STORY_Rep_Tech_Ground_Legions_1_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Legions_1_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Legions_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Legions_1">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Legions_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Legions_1">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Legions_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Legions_1">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_1_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Legions_1</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Legions_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Ground_Legions_2_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Legions_2_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Legions_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Legions_2">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Legions_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Legions_2">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Legions_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Legions_2">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_2_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Legions_2</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Legions_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Ground_Legions_3_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Legions_3_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Legions_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Legions_3">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Branch>Rep_Tech_Ground_Legions_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Legions_3">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Legions_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Branch>Rep_Tech_Ground_Legions_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Legions_3">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Legions_3_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Legions_3</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Legions_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+    <Event Name="STORY_Rep_Tech_Ground_SpecialForces_1_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_SpecialForces_1_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_SpecialForces_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_SpecialForces_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_SpecialForces_1">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_SpecialForces_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_SpecialForces_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_SpecialForces_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_SpecialForces_1">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_SpecialForces_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_SpecialForces_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_SpecialForces_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_SpecialForces_1">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_SpecialForces_1_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Ground_SpecialForces_2_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_SpecialForces_2_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_SpecialForces_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_SpecialForces_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_SpecialForces_2">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_SpecialForces_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Branch>Rep_Tech_Ground_SpecialForces_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_SpecialForces_2">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_SpecialForces_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Branch>Rep_Tech_Ground_SpecialForces_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_SpecialForces_2">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_SpecialForces_2_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+
+
+    <Event Name="STORY_Rep_Tech_Ground_Vehicle_1_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Vehicle_1_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Vehicle_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Vehicle_1">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Vehicle_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Vehicle_1">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_1</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_1_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Vehicle_1_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Vehicle_1">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_1_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Ground_Vehicle_2_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Vehicle_2_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Vehicle_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Vehicle_2">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Vehicle_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Vehicle_2">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_2</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_2_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Vehicle_2_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Vehicle_2">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_2_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_Rep_Tech_Ground_Vehicle_3_Off">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>Rep_Tech_Ground_Vehicle_3_Off</Event_Param2>
+        <Reward_Type>TRIGGER_AI</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_3_Off</Reward_Param1>
+        <Reward_Param2>Empire</Reward_Param2>
+        <Branch>Rep_Tech_Ground_Vehicle_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_DESTROY_Rep_Tech_Ground_Vehicle_3">
+        <Event_Type> STORY_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Branch>Rep_Tech_Ground_Vehicle_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Vehicle_3">
+        <Event_Type>STORY_TACTICAL_DESTROY</Event_Type>
+        <Event_Param1>Rep_Tech_Ground_Vehicle_3</Event_Param1>
+        <Event_Param2/>
+        <Event_Param3>1</Event_Param3>
+        <Branch>Rep_Tech_Ground_Vehicle_3_Branch</Branch>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <Event Name="Reset_Branch_Rep_Tech_Ground_Vehicle_3">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rep_Tech_Ground_Vehicle_3_Branch</Reward_Param1>
+        <Prereq>STORY_DESTROY_Rep_Tech_Ground_Vehicle_3</Prereq>
+        <Prereq>STORY_TACTICAL_DESTROY_Rep_Tech_Ground_Vehicle_3</Prereq>
+        <Perpetual>true</Perpetual>
+    </Event>
+    <!--Lock Unit Events end-->
+
+
+    <!--DISABLE/ENABLE_BUILDABLE Events-->
+    <Event Name="Disable_Buildable_Event">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>DISABLE_BUILDABLE_NOTIFICATION</Event_Param2>
+        <Reward_Type>DISABLE_BUILDABLE</Reward_Type>
+        <Reward_Param1/>
+        <Perpetual>True</Perpetual>
+    </Event>
+    <Event Name="Enable_Buildable_Event">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>ENABLE_BUILDABLE_NOTIFICATION</Event_Param2>
+        <Reward_Type>ENABLE_BUILDABLE</Reward_Type>
+        <Reward_Param1/>
+        <Perpetual>True</Perpetual>
+    </Event>
+
+
+
+    <!--****************************************************-->
+    <!--Unit Lock/Unlock Events-->
+    <Event Name="Lock_Unit_Event">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>LOCK_UNIT_NOTIFICATION</Event_Param2>
+        <Reward_Type>LOCK_UNIT</Reward_Type>
+        <Reward_Param1/>
+        <Perpetual>True</Perpetual>
+    </Event>
+    <Event Name="Unlock_Unit_Event">
+        <Event_Type>STORY_AI_NOTIFICATION</Event_Type>
+        <Event_Param2>UNLOCK_UNIT_NOTIFICATION</Event_Param2>
+        <Reward_Type>BUILDABLE_UNIT</Reward_Type>
+        <Reward_Param1/>
+        <Perpetual>True</Perpetual>
+    </Event>
+
+
+
+    <Event Name="Flush">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+        <Event_Param1>1</Event_Param1>
+        
+        <Prereq>Reset_Branch_Rep_Tech_Space_Large_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Space_Large_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Space_Large_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Space_Medium_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Space_Medium_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Space_Medium_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Space_Small_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Space_Small_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Space_Small_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Vehicle_3</Prereq>
+
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Legions_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_3</Prereq>
+
+        <Perpetual>true</Perpetual>
+    </Event>
+	
+	<Event Name="Rebel_Player_Active">
+		<Event_Type>STORY_FLAG</Event_Type>
+		<Event_Param1>Rebel_Player</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>GREATER_THAN_EQUAL_TO</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Rebel_Player_Active</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Rebel_Player_Inactive">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Rebel_Player_Active</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Space_Tech_Story_Start</Prereq>
+	</Event>
+	
+	 <Event Name="Announcer_Rebel_Empire_Tech_Upgraded">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>SPEECH</Reward_Type>
+		<Reward_Param1>SPEECH_U_Enemy_tech</Reward_Param1>
+
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_3</Prereq>
+
+		<Branch>Rebel_Player_Active</Branch>
+    </Event>
+	
+	<Event Name="Reset_Branch_Announcer_Rebel_Empire_Tech_Upgraded">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>10</Event_Param1>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Rebel_Player_Active</Reward_Param1>
+        <Prereq>Announcer_Rebel_Empire_Tech_Upgraded</Prereq>
+		<Branch>Rebel_Player_Active</Branch>
+    </Event>
+	
+	<Event Name="Underworld_Player_Active">
+		<Event_Type>STORY_FLAG</Event_Type>
+		<Event_Param1>Underworld_Player</Event_Param1>
+		<Event_Param2>1</Event_Param2>
+		<Event_Param3>GREATER_THAN_EQUAL_TO</Event_Param3>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Underworld_Player_Active</Reward_Param1>
+		<Reward_Param2>0</Reward_Param2>
+	</Event>
+	
+	<Event Name="Underworld_Player_Inactive">
+		<Event_Type>STORY_TRIGGER</Event_Type>
+		<Reward_Type>DISABLE_BRANCH</Reward_Type>
+		<Reward_Param1>Underworld_Player_Active</Reward_Param1>
+		<Reward_Param2>1</Reward_Param2>
+		<Prereq>Space_Tech_Story_Start</Prereq>
+	</Event>
+	
+	<Event Name="Announcer_Underworld_Enemy_Tech_Upgraded">
+        <Event_Type>STORY_TRIGGER</Event_Type>
+        <Reward_Type>SPEECH</Reward_Type>
+		<Reward_Param1>SPEECH_U_Enemy_tech</Reward_Param1>
+
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Large_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Medium_3</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Space_Small_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Infantry_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_2</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_Legions_3</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_SpecialForces_1</Prereq>
+        <Prereq>Reset_Branch_Rep_Tech_Ground_SpecialForces_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_1</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_2</Prereq>
+        <Prereq>STORY_CONSTRUCT_Rep_Tech_Ground_Vehicle_3</Prereq>
+		<Branch>Underworld_Player_Active</Branch>
+    </Event>
+	
+	<Event Name="Reset_Branch_Announcer_Underworld_Enemy_Tech_Upgraded">
+        <Event_Type>STORY_ELAPSED</Event_Type>
+		<Event_Param1>10</Event_Param1>
+        <Reward_Type>RESET_BRANCH</Reward_Type>
+        <Reward_Param1>Underworld_Player_Active</Reward_Param1>
+        <Prereq>Announcer_Underworld_Enemy_Tech_Upgraded</Prereq>
+        <Branch>Underworld_Player_Active</Branch>
+    </Event>
+	
+</Story>

@@ -1,0 +1,407 @@
+<?xml version="1.0"?>
+
+<SpecialStructures>
+
+    <!-- External Hard Dependencies: Empire_Barracks_Template, UPGRADE_TEMPLATE, UPGRADE_TEMPLATE_DUMMY -->
+    <!-- External Soft Dependencies: -->
+
+    <!-- Unit Definition(s) -->
+	<SpecialStructure Name="Rep_Barracks_Template">
+		<Variant_Of_Existing_Type>Ground_Building_Template</Variant_Of_Existing_Type>
+		<Sabotage_Cost_Credits>4000</Sabotage_Cost_Credits>
+		<Tutorial_Sabotage_Cost_Credits>4000</Tutorial_Sabotage_Cost_Credits>
+		<Text_ID>AOTR_EMPIRE_BARRACKS_TXT</Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+            AOTCW_TEXT_REP_BARRACKS_1_TOOL
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_1000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_BARRACKS_1
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_15
+		</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>AOTR_EMPIRE_BARRACKS_TOOL </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Land_Model_Name>EB_InfantryBarracks.alo</Land_Model_Name>
+		<Icon_Name>i_button_e_infantry_barracks.tga</Icon_Name>
+		<GUI_Row> 0 </GUI_Row>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.1</Dense_FOW_Reveal_Range_Multiplier>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Armor_Type> Armor_Land_Building </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Affiliation>Empire</Affiliation>
+		<AI_Combat_Power>100</AI_Combat_Power>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+
+		<Tech_Level>99</Tech_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures/>
+		<Required_Planets/>
+		<Tactical_Health>1000</Tactical_Health>
+		<Autoresolve_Health>1000</Autoresolve_Health>
+		<Victory_Relevant>no</Victory_Relevant>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Hardpoints>
+            HP_Barracks_Coaxial_01,
+            HP_Barracks_Coaxial_02,
+            HP_Barracks_Coaxial_03,
+            HP_Barracks_Coaxial_04,
+            HP_Barracks_Coaxial_05,
+            HP_Barracks_Coaxial_06,
+            HP_Barracks_EWEB_01,
+            			<!-- HP_Barracks_AI_01 -->
+		</Hardpoints>
+
+		<Num_Garrison_Slots>0</Num_Garrison_Slots>
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>200.0</Spawned_Squadron_Location_Flyout_Distances>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Barracks_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Barracks_Destroyed </SFXEvent_Unit_Lost>
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-15</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Rep_BARRACKS_SPAWNER">
+		<Variant_Of_Existing_Type>Rep_Barracks_Level_1</Variant_Of_Existing_Type>
+		<Lua_Script>Upgrade_Republic_Barracks</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+		<AI_Combat_Power>20</AI_Combat_Power>
+	</SpecialStructure>
+
+
+	<SpecialStructure Name="Rep_Barracks_Level_1">
+		<Variant_Of_Existing_Type>Rep_Barracks_Template</Variant_Of_Existing_Type>
+
+		<Starting_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Platoon_Dummy, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Platoon_Dummy, 200</Reserve_Spawned_Units_Tech_0>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-15</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<GroundCompany Name="UPGRADE_BARRACKS_1_TO_2">
+		<Text_ID>AOTR_TEXT_UPGRADE_BARRACKS_1_TO_2</Text_ID>
+		<Icon_Name>I_BUTTON_E_INFANTRY_BARRACKS_2_UPGRADE.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_BARRACKS_1_TO_2_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TEXT_REP_BARRACKS_2_TOOL
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_BARRACKS_2
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_35
+		</Encyclopedia_Text>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Required_Special_Structures> Rep_Barracks_Level_1 </Required_Special_Structures>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>3500</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<GUI_Row> 0 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>UPGRADE_BARRACKS_1_TO_2_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="UPGRADE_BARRACKS_1_TO_2_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Barracks</Lua_Script>
+		<AI_Combat_Power>300</AI_Combat_Power>
+	</GroundVehicle>
+
+	<SpecialStructure Name="Rep_Barracks_Level_2">
+		<Variant_Of_Existing_Type>Rep_Barracks_Template</Variant_Of_Existing_Type>
+		<!-- Noch zu machen -->
+		<Sabotage_Cost_Credits>2000</Sabotage_Cost_Credits>
+		<Tutorial_Sabotage_Cost_Credits>2000</Tutorial_Sabotage_Cost_Credits>
+		<Text_ID>AOTR_EMPIRE_BARRACKS_2_TXT</Text_ID>
+		<Icon_Name>i_button_e_infantry_barracks_2.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+            AOTCW_TEXT_REP_BARRACKS_2_TOOL
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_BARRACKS_2
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_35
+		</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> AOTR_EMPIRE_BARRACKS_2_TOOL </MP_Encyclopedia_Text>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Required_Special_Structures>Rep_Barracks_Level_1</Required_Special_Structures>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+
+		<Shield_Points>0</Shield_Points>
+		<Damage>2</Damage>
+		<AI_Combat_Power>100</AI_Combat_Power>
+		<Tactical_Health>2000</Tactical_Health>
+		<Autoresolve_Health>2000</Autoresolve_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+
+		<Starting_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Platoon_Dummy, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Platoon_Dummy, 200</Reserve_Spawned_Units_Tech_0>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-35</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<GroundCompany Name="UPGRADE_BARRACKS_2_TO_1">
+		<Text_ID>AOTR_TEXT_UPGRADE_BARRACKS_2_TO_1</Text_ID>
+		<Icon_Name>I_BUTTON_E_INFANTRY_BARRACKS_1_DOWNGRADE.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_BARRACKS_2_TO_1_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TEXT_REP_BARRACKS_1_TOOL
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_1000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_BARRACKS_1
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_15
+		</Encyclopedia_Text>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Required_Special_Structures> Rep_Barracks_Level_2 </Required_Special_Structures>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>1</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>UPGRADE_BARRACKS_2_TO_1_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="UPGRADE_BARRACKS_2_TO_1_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Barracks</Lua_Script>
+	</GroundVehicle>
+
+	<GroundCompany Name="UPGRADE_BARRACKS_2_TO_3">
+		<Text_ID>AOTR_TEXT_UPGRADE_BARRACKS_2_TO_3</Text_ID>
+		<Icon_Name>I_BUTTON_E_INFANTRY_BARRACKS_3_UPGRADE.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_BARRACKS_2_TO_3_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TEXT_REP_BARRACKS_3_TOOL
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_3000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_BARRACKS_3
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_65
+		</Encyclopedia_Text>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Required_Special_Structures> Rep_Barracks_Level_2 </Required_Special_Structures>
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Required_Planets> 
+			Kalee, Dorin, Felucia, Trandosha, Kashyyyk,
+			Mandalore, Concord_Dawn, Myrkr, Kamino, Lok,
+			Eriadu, Druckenwell, Rattatak, Carida, Anaxes,
+			Coruscant, Corulag, Scarif,
+
+			Kalee_Big, Dorin_Big, Felucia_Big, Trandosha_Big, Kashyyyk_Big,
+			Mandalore_Big, Concord_Dawn_Big, Myrkr_Big, Kamino_Big, Lok_Big,
+			Eriadu_Big, Druckenwell_Big, Rattatak_Big, Carida_Big, Anaxes_Big,
+			Coruscant_Big, Corulag_Big, Scarif_Big,
+
+			Mimban_Big, Klatooine_Big, Zanbar_Big, Xagobah_Big, Vendaxa_Big,
+			Wayland_Big,
+		</Required_Planets>
+		<GUI_Row> 0 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>UPGRADE_BARRACKS_2_TO_3_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="UPGRADE_BARRACKS_2_TO_3_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Barracks</Lua_Script>
+		<AI_Combat_Power>600</AI_Combat_Power>
+	</GroundVehicle>
+
+	<SpecialStructure Name="Rep_Barracks_Level_3">
+		<Variant_Of_Existing_Type>Rep_Barracks_Template</Variant_Of_Existing_Type>
+		<!-- Noch zu machen -->
+		<Sabotage_Cost_Credits>2000</Sabotage_Cost_Credits>
+		<Tutorial_Sabotage_Cost_Credits>2000</Tutorial_Sabotage_Cost_Credits>
+		<Text_ID>AOTR_EMPIRE_BARRACKS_3_TXT</Text_ID>
+		<Icon_Name>i_button_e_infantry_barracks_3.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+            AOTCW_TEXT_REP_BARRACKS_3_TOOL
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_3000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_BARRACKS_3
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_65
+		</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> AOTR_EMPIRE_BARRACKS_3_TOOL </MP_Encyclopedia_Text>
+		<Build_Cost_Credits>11000</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Required_Special_Structures>Rep_Barracks_Level_2</Required_Special_Structures>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+
+		<Required_Planets/>
+		<Shield_Points>0</Shield_Points>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+
+		<Damage>2</Damage>
+		<AI_Combat_Power>100</AI_Combat_Power>
+		<Tactical_Health>3000</Tactical_Health>
+		<Autoresolve_Health>3000</Autoresolve_Health>
+		<Starting_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph2_Shock_Platoon_Dummy, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph2_Shock_Platoon_Dummy, 200</Reserve_Spawned_Units_Tech_0>
+		<Starting_Spawned_Units_Tech_0>Rep_EWEB_Troopers_Shock, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_EWEB_Troopers_Shock, 200</Reserve_Spawned_Units_Tech_0>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-65</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<GroundCompany Name="UPGRADE_BARRACKS_3_TO_2">
+		<Text_ID>AOTR_TEXT_UPGRADE_BARRACKS_3_TO_2</Text_ID>
+		<Icon_Name>I_BUTTON_E_INFANTRY_BARRACKS_2_DOWNGRADE.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_BARRACKS_3_TO_2_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TEXT_REP_BARRACKS_2_TOOL
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_BARRACKS_2
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_35
+		</Encyclopedia_Text>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Required_Special_Structures> Rep_Barracks_Level_3 </Required_Special_Structures>
+		<Build_Cost_Credits>1</Build_Cost_Credits>
+		<Build_Time_Seconds>50</Build_Time_Seconds>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>UPGRADE_BARRACKS_3_TO_2_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="UPGRADE_BARRACKS_3_TO_2_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Barracks</Lua_Script>
+	</GroundVehicle>
+
+</SpecialStructures>

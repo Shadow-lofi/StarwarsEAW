@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FighterUnits>
+
+    <!-- External Hard Dependencies: SpaceUnit_Bomber_Shielded_Template -->
+    <!-- External Soft Dependencies: -->
+
+    <!-- Unit Definition(s) -->
+    <SpaceUnit Name="N_BT_47C_Bomber">
+        <Variant_Of_Existing_Type>SpaceUnit_Bomber_Shielded_Template</Variant_Of_Existing_Type>
+        <Text_ID>AOTR_TEXT_UNIT_BT47C_BOMBER</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_SPACE_CLASS_BOMBER
+            AOTR_SPACE_ROLE_HEAVY_BOMBER
+            AOTR_MANUFACTURER_INCOM
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_TOOLTIP_BT47C_BOMBER
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_SHIELD_ANTILC_SLOW_35
+            AOTR_SPACE_HULL_HEAVY_FIGHTER_70
+            AOTR_SPACE_MOVEMENT_VLOW_TURN_250
+            AOTR_SPACE_SENSOR_2000
+            AOTR_SPACE_RANGE_1250_750
+            AOTR_SPACE_WEAPONS_BT47C_BOMBER
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_PASSIVES_COPILOT
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_bt47c.tga</Icon_Name>
+        <Space_Model_Name>RV_BT-47C.ALO</Space_Model_Name>
+        <Scale_Factor>1.25</Scale_Factor>
+        <Select_Box_Scale>40</Select_Box_Scale>
+
+        <Max_Speed>2.5</Max_Speed>
+        <Min_Speed>1.875</Min_Speed>
+        <Max_Rate_Of_Turn>0.625</Max_Rate_Of_Turn>
+        <Max_Lift>0.625</Max_Lift>
+        <Max_Thrust>1.0</Max_Thrust>
+        <Max_Rate_Of_Roll>0.625</Max_Rate_Of_Roll>
+        <Bank_Turn_Angle>90</Bank_Turn_Angle>
+        <Hyperspace>Yes</Hyperspace>
+        <Hyperspace_Speed>1.2</Hyperspace_Speed>
+        <Maintenance_Cost>0.1</Maintenance_Cost>
+
+        <Affiliation>Empire</Affiliation>
+
+        <AI_Combat_Power>58.1</AI_Combat_Power>
+        <Autoresolve_Health>40</Autoresolve_Health>
+
+        <Shield_Points>35</Shield_Points>
+        <Shield_Refresh_Rate>0.18</Shield_Refresh_Rate>
+        <Energy_Capacity>35</Energy_Capacity>
+        <Energy_Refresh_Rate>0.18</Energy_Refresh_Rate>
+        <Tactical_Health>70</Tactical_Health>
+
+        <Armor_Type>Armor_Space_HeavyFighter</Armor_Type>
+        <Shield_Armor_Type>Shield_Space_AntiLC_Fighter</Shield_Armor_Type>
+
+        <HardPoints>
+            HP_BT_47C_Lasers_01,
+            HP_BT_47C_Lasers_02,
+            HP_BT_47C_Torpedo
+        </HardPoints>
+
+        <Space_FOW_Reveal_Range>2000</Space_FOW_Reveal_Range>
+
+        <Death_Explosions>Fighter_Explosion_Space</Death_Explosions>
+        <Death_SFXEvent_Start_Die>Unit_X_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+        <Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
+
+        <SFXEvent_Select>Unit_Select_X_Wing</SFXEvent_Select>
+        <SFXEvent_Move>Unit_Move_X_Wing</SFXEvent_Move>
+        <SFXEvent_Fleet_Move>Unit_Fleet_Move_X_Wing</SFXEvent_Fleet_Move>
+        <SFXEvent_Attack>Unit_Attack_X_Wing</SFXEvent_Attack>
+        <SFXEvent_Guard>Unit_Guard_X_Wing</SFXEvent_Guard>
+        <SFXEvent_Assist_Move>Unit_Assist_Move_X_Wing</SFXEvent_Assist_Move>
+        <SFXEvent_Assist_Attack>Unit_Assist_Attack_X_Wing</SFXEvent_Assist_Attack>
+        <SFXEvent_Move_Into_Asteroid_Field>Unit_Asteroids_X_Wing</SFXEvent_Move_Into_Asteroid_Field>
+        <SFXEvent_Move_Into_Nebula>Unit_Nebula_X_Wing</SFXEvent_Move_Into_Nebula>
+
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_LASER, Unit_HP_LASER_X_Wing</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_MISSILE, Unit_HP_MISSILE_X_Wing</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_TORPEDO, Unit_HP_TORP_X_Wing</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_ION_CANNON, Unit_HP_ION_X_Wing</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_SHIELD_GENERATOR, Unit_HP_SHIELDS_X_Wing</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_ENGINE, Unit_HP_ENGINES_X_Wing</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_GRAVITY_WELL, Unit_HP_GRAV_X_Wing</SFXEvent_Attack_Hardpoint>
+
+        <SFXEvent_Health_Low_Warning>Unit_Health_Low_X_Wing</SFXEvent_Health_Low_Warning>
+        <SFXEvent_Health_Critical_Warning>Unit_Health_Critical_X_Wing</SFXEvent_Health_Critical_Warning>
+        <SFXEvent_Enemy_Damaged_Health_Low_Warning>Unit_Enemy_Health_Low_X_Wing</SFXEvent_Enemy_Damaged_Health_Low_Warning>
+        <SFXEvent_Enemy_Damaged_Health_Critical_Warning>Unit_Enemy_Health_Critical_X_Wing</SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+        <SFXEvent_Ambient_Moving>ARC170_Fly_By</SFXEvent_Ambient_Moving>
+        <SFXEvent_Ambient_Moving_Min_Delay_Seconds>5</SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+        <SFXEvent_Ambient_Moving_Max_Delay_Seconds>10</SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+        <SFXEvent_Engine_Cinematic_Focus_Loop>ARC170_Fly_By</SFXEvent_Engine_Cinematic_Focus_Loop>
+
+        <CategoryMask>Bomber | AntiMedium</CategoryMask>
+        <Targeting_Priority_Set>Space_Bomber_AntiMedium</Targeting_Priority_Set>
+
+        <Spin_Away_On_Death_Explosion>Fighter_Explosion_Space</Spin_Away_On_Death_Explosion>
+        <Spin_Away_On_Death_SFXEvent_Start_Die>Unit_X_Wing_Spinning_By</Spin_Away_On_Death_SFXEvent_Start_Die>
+    </SpaceUnit>
+    <SpaceUnit Name="N_BT_47C_Bomber_NV">
+        <Variant_Of_Existing_Type>N_BT_47C_Bomber</Variant_Of_Existing_Type>
+        <Affiliation>Neutral</Affiliation>
+        <Victory_Relevant>No</Victory_Relevant>
+    </SpaceUnit>
+    
+    <!-- Squadron Definition(s) -->
+    <Squadron Name="N_BT_47C_Bomber_S">
+        <Text_ID>AOTR_TEXT_UNIT_BT47C_BOMBER_S</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_SPACE_CLASS_BOMBER
+            AOTR_SPACE_ROLE_HEAVY_BOMBER
+            AOTR_MANUFACTURER_INCOM
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_TOOLTIP_BT47C_BOMBER
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_SHIELD_ANTILC_SLOW_35
+            AOTR_SPACE_HULL_HEAVY_FIGHTER_70
+            AOTR_SPACE_MOVEMENT_VLOW_TURN_250
+            AOTR_SPACE_SENSOR_2000
+            AOTR_SPACE_RANGE_1250_750
+            AOTR_SPACE_WEAPONS_BT47C_BOMBER
+            AOTR_SPACE_SQUADRON_SIZE_4
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_PASSIVES_COPILOT
+        </Encyclopedia_Text>
+        <Encyclopedia_Good_Against/>
+        <Encyclopedia_Vulnerable_To/>
+        <Icon_Name>i_button_bt47c.tga</Icon_Name>
+
+        <GUI_Row>0</GUI_Row>
+        <Is_Dummy>Yes</Is_Dummy>
+        <Formation_Priority>1</Formation_Priority>
+        <Is_Escort>Yes</Is_Escort>
+        <Is_Bomber>no</Is_Bomber>
+        <AI_Combat_Power>840</AI_Combat_Power>
+        <Damage>100</Damage>
+        <Autoresolve_Health>500</Autoresolve_Health>
+        <Affiliation>Neutral</Affiliation>
+        <Political_Control>0</Political_Control>
+        <Build_Cost_Credits>1600</Build_Cost_Credits>
+        <Piracy_Value_Credits>25</Piracy_Value_Credits>
+        <Build_Time_Seconds>53</Build_Time_Seconds>
+        <Tactical_Bribe_Cost>70</Tactical_Bribe_Cost>
+        <Score_Cost_Credits>70</Score_Cost_Credits>
+        <Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+        <Tech_Level>0</Tech_Level>
+        <Required_Star_Base_Level>1</Required_Star_Base_Level>
+        <Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+        <SpaceBehavior>ABILITY_COUNTDOWN</SpaceBehavior>
+        <Squadron_Units>N_BT_47C_Bomber, N_BT_47C_Bomber</Squadron_Units>
+        <Squadron_Units>N_BT_47C_Bomber, N_BT_47C_Bomber</Squadron_Units>
+        <!-- TWO PAIR FORMATION -->
+        <Squadron_Offsets>45.0,-15.0,-15.0</Squadron_Offsets>
+        <Squadron_Offsets>0.0,30.0,15.0</Squadron_Offsets>
+        <Squadron_Offsets>-90.0,-60.0,-60.0</Squadron_Offsets>
+        <Squadron_Offsets>-135.0,-105.0,-30.0</Squadron_Offsets>
+        <Max_Squad_Size>4</Max_Squad_Size>
+
+        <SFXEvent_Build_Started>EHD_Build_Unit</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>Unit_Complete_IPV</SFXEvent_Build_Complete>
+
+        <FormationOrder>1</FormationOrder>
+        <Squadron_Formation_Error_Tolerance>50.0</Squadron_Formation_Error_Tolerance>
+        <Space_FOW_Reveal_Range>1000.0</Space_FOW_Reveal_Range>
+        <Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+        <Guard_Chase_Range>200.0</Guard_Chase_Range>
+        <Idle_Chase_Range>500.0</Idle_Chase_Range>
+        <Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+        <Autonomous_Move_Extension_Vs_Attacker>0.0</Autonomous_Move_Extension_Vs_Attacker>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+        <Property_Flags>SmallShip</Property_Flags>
+        <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+        <Tactical_Build_Cost_Multiplayer>700</Tactical_Build_Cost_Multiplayer>
+        <Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+        <Tactical_Build_Prerequisites/>
+        <Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+        <!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+        <!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+        <!--<MULTIPLAYER SKIRMISH VALUES END>-->
+        <Population_Value>2</Population_Value>
+        <Space_Override_Population_Value>6</Space_Override_Population_Value>
+        <Encyclopedia_Unit_Class>AOTR_TACTICAL_POP_REQ_6</Encyclopedia_Unit_Class>
+        <Unit_Abilities_Data SubObjectList="Yes">
+            <Unit_Ability>
+                <Type>HUNT</Type>
+            </Unit_Ability>
+        </Unit_Abilities_Data>
+    </Squadron>
+    <Squadron Name="N_BT_47C_Bomber_S_NV">
+        <Variant_Of_Existing_Type>N_BT_47C_Bomber_S</Variant_Of_Existing_Type>
+        <Affiliation>Neutral</Affiliation>
+        <Victory_Relevant>No</Victory_Relevant>
+        <Squadron_Units>N_BT_47C_Bomber_NV, N_BT_47C_Bomber_NV</Squadron_Units>
+        <Squadron_Units>N_BT_47C_Bomber_NV, N_BT_47C_Bomber_NV</Squadron_Units>
+    </Squadron>
+    
+</FighterUnits>

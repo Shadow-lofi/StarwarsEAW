@@ -1,0 +1,300 @@
+<?xml version="1.0"?>
+
+<SpecialStructures>
+
+    <!-- External Hard Dependencies: Ground_Building_Template -->
+    <!-- External Soft Dependencies: -->
+
+    <!-- Unit Definition(s) -->
+	<SpecialStructure Name="Rep_Stronghold_Small">
+		<Variant_Of_Existing_Type>Ground_Building_Template</Variant_Of_Existing_Type>
+
+		<Text_ID>AOTCW_TEXT_REP_OUTPOST </Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_GARRISON_POST
+			AOTR_TEXT_EMPTY
+            AOTCW_TOOLTIP_REP_OUTPOST
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_BC
+			AOTR_LAND_HEALTH_1000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_OUTPOST
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_62
+		</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> AOTR_EMPIRE_STRONGHOLD_SMALL_TOOL </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_STRONGHOLD_SMALL.tga</Icon_Name>
+		<Land_Model_Name>EB_Outpost.alo</Land_Model_Name>
+		<Scale_Factor>1.0</Scale_Factor>
+		<Required_Planets/>
+
+		<Hardpoints>HP_Outpost_EWEB</Hardpoints>
+		<Should_Be_Destroyed_When_All_Hardpoints_Destroyed> No </Should_Be_Destroyed_When_All_Hardpoints_Destroyed>
+
+		<Tech_Level>99</Tech_Level>
+		<Damage>2</Damage>
+		<AI_Combat_Power>50</AI_Combat_Power>
+		<Armor_Type> Armor_Land_Building_Combat </Armor_Type>
+		<Tactical_Health>1000</Tactical_Health>
+		<Build_Cost_Credits>2500</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Sabotage_Cost_Credits>2400</Sabotage_Cost_Credits>
+		<Score_Cost_Credits>4800</Score_Cost_Credits>
+		<Affiliation>Empire</Affiliation>
+		<Population_Value>1</Population_Value>
+
+		<Starting_Spawned_Units_Tech_0>Rep_Defense_Trooper_Platoon_Dummy, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Defense_Trooper_Platoon_Dummy, 3</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Rep_Heavy_Defense_Trooper_Platoon_Dummy, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Heavy_Defense_Trooper_Platoon_Dummy, 3</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Platoon_Dummy, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Platoon_Dummy, 3</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Defense_Garrison_Dummy_Small, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Defense_Garrison_Dummy_Small, 0</Reserve_Spawned_Units_Tech_0>
+
+		
+		<!-- <Starting_Spawned_Units_Tech_0>TX_130_Tank_Scout, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TX_130_Tank_Scout, 100</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Rep_AT_RT, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_AT_RT, 800</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Pod_Walker, 0</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Pod_Walker, 0</Reserve_Spawned_Units_Tech_0> -->
+
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+		<Spawned_Squadron_Location_Flyout_Distances>75</Spawned_Squadron_Location_Flyout_Distances>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Command_Center_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Command_Center_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Barracks_Select_SFX</SFXEvent_Select>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-62</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Rep_STRONGHOLD_SPAWNER">
+		<Variant_Of_Existing_Type>Rep_Stronghold_Small</Variant_Of_Existing_Type>
+		<Lua_Script>Upgrade_Republic_Stronghold</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+	</SpecialStructure>
+
+	<GroundCompany Name="UPGRADE_STRONGHOLD_SMALL_TO_MEDIUM">
+		<Text_ID>AOTR_TEXT_UPGRADE_STRONGHOLD_SMALL_TO_MEDIUM </Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_GARRISON_POST
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_STRONGHOLD_SMALL_TO_MEDIUM_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TOOLTIP_REP_STRONGHOLD
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_BC
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_STRONGHOLD
+			AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_150
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_STRONGHOLD_UPGRADE_MEDIUM.tga</Icon_Name>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Required_Special_Structures> Rep_Stronghold_Small </Required_Special_Structures>
+
+		<Required_Planets>
+            Alderaan, Anaxes, Bothawui, Carida, Christophsis,
+			Corellia, Corulag, Coruscant, Druckenwell, Dubrillion, Eriadu,
+			Foerost, Fondor, Geonosis, Kamino, Kashyyyk, 
+			Kuat, Mandalore, MonCalimari, Muunilinst, Naboo, NalHutta,
+			OrdMantell, Raxus_Secundus, Rendili, Rhen_Var, Rishi, Rothana,
+			Serenno, Skako, Sluis_Van, Sullust, Yag_Dhul,
+			Yaga_Minor, 
+
+			Alderaan_Big, Anaxes_Big, Bothawui_Big, Carida_Big, Christophsis_Big,
+			Corellia_Big, Corulag_Big, Coruscant_Big, Druckenwell_Big, Dubrillion_Big, Eriadu_Big,
+			Foerost_Big, Fondor_Big, Geonosis_Big, Kamino_Big, Kashyyyk_Big, 
+			Kuat_Big, Mandalore_Big, MonCalimari_Big, Muunilinst_Big, Naboo_Big, NalHutta_Big,
+			OrdMantell_Big, Raxus_Secundus_Big, Rendili_Big, Rhen_Var_Big, Rishi_Big, 
+			Rothana_Big,
+			Serenno_Big, Skako_Big, Sluis_Van_Big, Sullust_Big, Yag_Dhul_Big,
+			Yaga_Minor_Big, 
+
+			Thyferra_Big, Aargau_Big, Chandrila_Big, Balmorra_Big, Orinda_Big,
+			Clak_Dor_Big, Gerrenthum_Big, Hosnian_Prime_Big, Denon_Big, Commenor_Big,
+			Lantillies_Big, Ralltiir_Big, Brentaal_IV_Big, Tepasi_Big, Sleheyron_Big,
+			Lianna_Big, Obroa_Skai_Big, Champala_Big, Chardaan_Big, Murkhana_Big,
+			Praesitlyn_Big, Castell_Big, Pantora_Big, Wayland_Big,
+		</Required_Planets>
+
+		<Population_Value>0</Population_Value>
+		<Build_Cost_Credits>3500</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<GUI_Row> 0 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>UPGRADE_STRONGHOLD_SMALL_TO_MEDIUM_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="UPGRADE_STRONGHOLD_SMALL_TO_MEDIUM_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Stronghold</Lua_Script>
+		<AI_Combat_Power>75</AI_Combat_Power>
+	</GroundVehicle>
+
+	<SpecialStructure Name="Rep_Stronghold_Medium">
+		<Variant_Of_Existing_Type>Ground_Building_Template</Variant_Of_Existing_Type>
+
+		<Text_ID>AOTCW_TEXT_REP_STRONGHOLD </Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_GARRISON_POST
+			AOTR_TEXT_EMPTY
+            AOTCW_TOOLTIP_REP_STRONGHOLD
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_BC
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_STRONGHOLD
+			AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_150
+		</Encyclopedia_Text>
+		<MP_Encyclopedia_Text> AOTR_EMPIRE_STRONGHOLD_MED_TOOL </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<Icon_Name>I_BUTTON_STRONGHOLD_MEDIUM.tga</Icon_Name>
+		<Land_Model_Name>EB_Outpost.alo</Land_Model_Name>
+		<Scale_Factor>1.1</Scale_Factor>
+		<Icon_Name/>
+		<Affiliation>Empire</Affiliation>
+
+		<Required_Special_Structures>Rep_Stronghold_Small</Required_Special_Structures>
+
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<Tech_Level>0</Tech_Level>
+		<Damage>3</Damage>
+		<AI_Combat_Power>75</AI_Combat_Power>
+		<Armor_Type> Armor_Land_Building_Combat </Armor_Type>
+		<Tactical_Health>2000</Tactical_Health>
+		<Autoresolve_Health>2000</Autoresolve_Health>
+		<Build_Cost_Credits>6000</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Sabotage_Cost_Credits>3350</Sabotage_Cost_Credits>
+		<Score_Cost_Credits>670</Score_Cost_Credits>
+		<Population_Value>0</Population_Value>
+
+		<Hardpoints>HP_Outpost_EWEB</Hardpoints>
+
+		<Should_Be_Destroyed_When_All_Hardpoints_Destroyed> No </Should_Be_Destroyed_When_All_Hardpoints_Destroyed>
+
+		<Starting_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Platoon_Dummy, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Platoon_Dummy, 6</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Heavy_Platoon_Dummy, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_Clonetrooper_Ph1_Heavy_Platoon_Dummy, 3</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Defense_Garrison_Dummy_Medium, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Defense_Garrison_Dummy_Medium, 0</Reserve_Spawned_Units_Tech_0>
+
+		<!-- <Starting_Spawned_Units_Tech_0>Rep_BARC_Speeder, 0</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_BARC_Speeder, 6</Reserve_Spawned_Units_Tech_0>
+		
+		<Starting_Spawned_Units_Tech_0>Rep_AT_RT, 4</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_AT_RT, 800</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>TX_130_Tank_Scout, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>TX_130_Tank_Scout, 100</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>AT_TE_Walker, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_TE_Walker, 200</Reserve_Spawned_Units_Tech_0> -->
+
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		<Spawn_Garrison_On_Load>True</Spawn_Garrison_On_Load>
+		<Spawned_Squadron_Location_Flyout_Distances>80</Spawned_Squadron_Location_Flyout_Distances>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-150</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<GroundCompany Name="UPGRADE_STRONGHOLD_MEDIUM_TO_SMALL">
+		<Text_ID>AOTR_TEXT_UPGRADE_STRONGHOLD_MEDIUM_TO_SMALL </Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_GARRISON_POST
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_STRONGHOLD_MEDIUM_TO_SMALL_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TOOLTIP_REP_OUTPOST
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_BC
+			AOTR_LAND_HEALTH_1000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_OUTPOST
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_62
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_STRONGHOLD_DOWNGRADE_SMALL.tga</Icon_Name>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Affiliation>Empire</Affiliation>
+		<Required_Special_Structures> Rep_Stronghold_Medium </Required_Special_Structures>
+		<Build_Cost_Credits>1</Build_Cost_Credits>
+		<Build_Time_Seconds>30</Build_Time_Seconds>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>UPGRADE_STRONGHOLD_MEDIUM_TO_SMALL_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="UPGRADE_STRONGHOLD_MEDIUM_TO_SMALL_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Stronghold</Lua_Script>
+	</GroundVehicle>
+</SpecialStructures>

@@ -1,0 +1,220 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FighterUnits>
+
+    <!-- External Hard Dependencies: SpaceUnit_Starfighter_Shielded_Template -->
+    <!-- External Soft Dependencies: -->
+
+    <!-- Unit Definition(s) -->
+    <SpaceUnit Name="Rep_V_Wing">
+        <Variant_Of_Existing_Type>SpaceUnit_Starfighter_Shielded_Template</Variant_Of_Existing_Type>
+        <Text_ID>TEXT_UNIT_VWING_FIGHTER</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_SPACE_CLASS_FIGHTER
+            AOTR_SPACE_ROLE_SWARM_INTERCEPTOR
+            AOTR_MANUFACTURER_KSE
+            AOTR_TEXT_EMPTY
+            TEXT_TOOLTIP_V_WING_01
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_SHIELD_ANTILASER_FAST_5
+            AOTR_SPACE_HULL_FIGHTER_8
+            AOTR_SPACE_MOVEMENT_HIGH_TURN_475
+            AOTR_SPACE_SENSOR_1500
+            AOTR_SPACE_RANGE_500_500
+            AOTR_SPACE_WEAPONS_V_WING
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_PASSIVES_ASTROMECH
+        </Encyclopedia_Text>
+        <Icon_Name>i_button_V_Wing_CSA.tga</Icon_Name>
+        <Space_Model_Name>Rep_VWING.ALO</Space_Model_Name>
+        <Scale_Factor>0.42</Scale_Factor>
+        <Select_Box_Scale>120</Select_Box_Scale>
+
+        <Max_Speed>3.45</Max_Speed>
+        <Min_Speed>2.375</Min_Speed>
+        <Max_Rate_Of_Turn>1.9</Max_Rate_Of_Turn>
+        <Max_Lift>1.9</Max_Lift>
+        <Max_Thrust>1.0</Max_Thrust>
+        <Max_Rate_Of_Roll>1.9</Max_Rate_Of_Roll>
+        <Bank_Turn_Angle>90</Bank_Turn_Angle>
+        
+
+        <Affiliation>Pirates</Affiliation>
+
+        <Armor_Type>Armor_Space_Fighter</Armor_Type>
+        <Shield_Armor_Type>Shield_Space_AntiLaser_Fighter</Shield_Armor_Type>
+
+        <AI_Combat_Power>21.5</AI_Combat_Power>
+        <Autoresolve_Health>8</Autoresolve_Health>
+        <Shield_Points>5</Shield_Points>
+        <Shield_Refresh_Rate>0.05</Shield_Refresh_Rate>
+        <Tactical_Health>90</Tactical_Health>
+
+        <Collision_Box_Modifier>1.1</Collision_Box_Modifier>
+
+        <Hardpoints>
+            HP_Vwing_Lasers
+        </Hardpoints>
+
+        <Death_Explosions>Fighter_Explosion_Space_Empire</Death_Explosions>
+        <Death_SFXEvent_Start_Die>Unit_TIE_Fighter_Death_SFX</Death_SFXEvent_Start_Die>
+        <Asteroid_Damage_Hit_Particles>Small_Damage_Space</Asteroid_Damage_Hit_Particles>
+
+        <SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+
+        <SFXEvent_Select>Clone_Fighter_Select</SFXEvent_Select>
+        <SFXEvent_Move>Clone_Fighter_Move</SFXEvent_Move>
+        <SFXEvent_Fleet_Move>Clone_Fighter_Move</SFXEvent_Fleet_Move>
+        <SFXEvent_Attack>Clone_Fighter_Attack</SFXEvent_Attack>
+        <SFXEvent_Guard>Clone_Fighter_Guard</SFXEvent_Guard>
+        <SFXEvent_Assist_Move>Clone_Fighter_Move</SFXEvent_Assist_Move>
+        <SFXEvent_Assist_Attack>Clone_Fighter_Attack</SFXEvent_Assist_Attack>
+        <SFXEvent_Move_Into_Asteroid_Field>Clone_Fighter_Move</SFXEvent_Move_Into_Asteroid_Field>
+        <SFXEvent_Move_Into_Nebula>Clone_Fighter_Nebula</SFXEvent_Move_Into_Nebula>
+
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_LASER, Clone_Fighter_Attack_Guns</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_MISSILE, Clone_Fighter_Attack_Guns</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_TORPEDO, Clone_Fighter_Attack_Guns</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_ION_CANNON, Clone_Fighter_Attack_Ions</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_SHIELD_GENERATOR, Clone_Fighter_Attack_Shields</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_ENGINE, Clone_Fighter_Attack_Engines</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_FIGHTER_BAY, Clone_Fighter_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_GRAVITY_WELL, Clone_Fighter_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_DUMMY_ART, Clone_Fighter_Attack</SFXEvent_Attack_Hardpoint>
+
+        <SFXEvent_Health_Low_Warning>Clone_Fighter_Low_Health</SFXEvent_Health_Low_Warning>
+        <SFXEvent_Health_Critical_Warning>Clone_Fighter_Critical_Health</SFXEvent_Health_Critical_Warning>
+        <SFXEvent_Enemy_Damaged_Health_Low_Warning>Clone_Fighter_Enemy_Low_Health</SFXEvent_Enemy_Damaged_Health_Low_Warning>
+        <SFXEvent_Enemy_Damaged_Health_Critical_Warning>Clone_Fighter_Enemy_Critical_Health</SFXEvent_Enemy_Damaged_Health_Critical_Warning>
+        
+
+        <SFXEvent_Ambient_Moving>TIE_Fighter_Fly_By</SFXEvent_Ambient_Moving>
+        <SFXEvent_Ambient_Moving_Min_Delay_Seconds>5</SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+        <SFXEvent_Ambient_Moving_Max_Delay_Seconds>10</SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+        <SFXEvent_Engine_Cinematic_Focus_Loop>TIE_Fighter_Eng_Idle_Loop</SFXEvent_Engine_Cinematic_Focus_Loop>
+
+        <CategoryMask>Fighter</CategoryMask>
+        <Targeting_Priority_Set>Space_Fighter</Targeting_Priority_Set>
+
+        <Spin_Away_On_Death_Explosion>Fighter_Explosion_Space_Empire</Spin_Away_On_Death_Explosion>
+        <Spin_Away_On_Death_SFXEvent_Start_Die>Unit_TIE_Fighter_Spinning_By</Spin_Away_On_Death_SFXEvent_Start_Die>
+        <Remove_Upon_Death>true</Remove_Upon_Death>
+
+        <Abilities SubObjectList="Yes">
+            <Force_Healing_Ability Name="Repair_Fighter_Light">
+                <Activation_Style>Space_Automatic</Activation_Style>
+                <Heal_Range>0.0</Heal_Range>
+                <Heal_Percent>0.01</Heal_Percent>
+                <Heal_Amount>0.0</Heal_Amount>
+                <Heal_Interval_In_Secs>3.0</Heal_Interval_In_Secs>
+                <Single_Target_Heal>No</Single_Target_Heal>
+                <Applicable_Unit_Categories/>
+                <Applicable_Unit_Types/>
+                <SFXEvent_Target_Affected/>
+                <Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+                <Owner_Light_Effect_Type/>
+                <Owner_Light_Effect_Color/>
+                <Owner_Light_Effect_Color2/>
+                <Owner_Light_Effect_Duration/>
+                <Owner_Light_Effect_Pulse_Count/>
+            </Force_Healing_Ability>
+        </Abilities>
+
+    </SpaceUnit>
+
+    <!-- Squadron Definition(s) -->
+    <Squadron Name="Rep_V_Wing_S">
+        <Text_ID>TEXT_VWING_SQUADRON</Text_ID>
+        <Encyclopedia_Text>
+                AOTR_SPACE_CLASS_FIGHTER
+                AOTR_SPACE_ROLE_SWARM_INTERCEPTOR
+                AOTR_MANUFACTURER_KSE
+                AOTR_TEXT_EMPTY
+                TEXT_TOOLTIP_V_WING_01
+                AOTR_TEXT_EMPTY
+                AOTR_SPACE_SHIELD_ANTILASER_FAST_5
+                AOTR_SPACE_HULL_FIGHTER_8
+                AOTR_SPACE_MOVEMENT_HIGH_TURN_475
+                AOTR_SPACE_SENSOR_1500
+                AOTR_SPACE_RANGE_500_500
+                AOTR_SPACE_WEAPONS_V_WING
+                AOTR_SPACE_SQUADRON_SIZE_8
+                AOTR_TEXT_EMPTY
+                AOTR_SPACE_PASSIVES_ASTROMECH
+        </Encyclopedia_Text>
+        <Encyclopedia_Good_Against/>
+        <Encyclopedia_Vulnerable_To/>
+        <Is_Dummy>Yes</Is_Dummy>
+        <Formation_Priority>1</Formation_Priority>
+        <Is_Escort>Yes</Is_Escort>
+        <Is_Bomber>no</Is_Bomber>
+        <Autoresolve_Health>60</Autoresolve_Health>
+        <Damage>20</Damage>
+        <Affiliation>Neutral</Affiliation>
+        <Political_Control>0</Political_Control>
+        <AI_Combat_Power>173</AI_Combat_Power>
+        <Build_Cost_Credits>1</Build_Cost_Credits>
+        <Piracy_Value_Credits>25</Piracy_Value_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Tactical_Bribe_Cost>50</Tactical_Bribe_Cost>
+        <Score_Cost_Credits>50</Score_Cost_Credits>
+        <Required_Timeline/>
+        <Required_Star_Base_Level>1</Required_Star_Base_Level>
+        <Required_Tech_Structure/>
+        <Required_Special_Structures>E_Shipyard_FighterModule</Required_Special_Structures>
+        <Build_Time_Reduced_By_Multiple_Factories> Yes </Build_Time_Reduced_By_Multiple_Factories>
+        <Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+        <SpaceBehavior>ABILITY_COUNTDOWN</SpaceBehavior>
+        <Squadron_Units>Rep_V_Wing</Squadron_Units>
+        <Squadron_Units>Rep_V_Wing</Squadron_Units>
+        <Squadron_Units>Rep_V_Wing</Squadron_Units>
+        <Max_Squad_Size>8</Max_Squad_Size>
+
+        <!--STAR FORMATION-->
+        <Squadron_Offsets>60.0,0.0,0.0</Squadron_Offsets>
+        <Squadron_Offsets>0.0,30.0,-13.0</Squadron_Offsets>
+        <Squadron_Offsets>0.0,-30.0,-13.0</Squadron_Offsets>
+        <Squadron_Offsets>0.0,0.0,13.0</Squadron_Offsets>
+        <Squadron_Offsets>-60.0,0.0,-26.0</Squadron_Offsets>
+        <Squadron_Offsets>-60.0,60.0,0.0</Squadron_Offsets>
+        <Squadron_Offsets>-60.0,-60.0,0.0</Squadron_Offsets>
+        <Squadron_Offsets>-60.0,0.0,26.0</Squadron_Offsets>
+
+        <Icon_Name>i_button_V_Wing_CSA.tga</Icon_Name>
+        <FormationOrder>1</FormationOrder>
+        <Squadron_Formation_Error_Tolerance>200.0</Squadron_Formation_Error_Tolerance>
+        <Space_FOW_Reveal_Range>1000.0</Space_FOW_Reveal_Range>
+        <Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+        <Guard_Chase_Range>200.0</Guard_Chase_Range>
+        <Idle_Chase_Range>1000.0</Idle_Chase_Range>
+        <Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+        <Autonomous_Move_Extension_Vs_Attacker>500.0</Autonomous_Move_Extension_Vs_Attacker>
+        <Build_Initially_Locked>Yes</Build_Initially_Locked>
+        <Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+        <Property_Flags>SmallShip</Property_Flags>
+
+        <SFXEvent_Build_Started>EHD_Build_Unit</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>Clone_Fighter_Select</SFXEvent_Build_Complete>
+        <!-- Non-Hero unit abilities description -->
+        <Unit_Abilities_Data SubObjectList="Yes">
+            <!-- Primary ability -->
+            <Unit_Ability>
+                <Type>HUNT</Type>
+            </Unit_Ability>
+        </Unit_Abilities_Data>
+        <Population_Value>1</Population_Value>
+        <Space_Override_Population_Value>4</Space_Override_Population_Value>
+        <Encyclopedia_Unit_Class>AOTR_TACTICAL_POP_REQ_4</Encyclopedia_Unit_Class>
+        <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+        <Tactical_Build_Cost_Multiplayer>500</Tactical_Build_Cost_Multiplayer>
+        <Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+        <Tactical_Build_Prerequisites/>
+        <Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+        <!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+        <!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+        <!--<MULTIPLAYER SKIRMISH VALUES END>-->
+    </Squadron>
+    
+</FighterUnits>

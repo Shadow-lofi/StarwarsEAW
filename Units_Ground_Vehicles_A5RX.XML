@@ -1,0 +1,222 @@
+<?xml version="1.0"?>
+
+<GroundVehicles>
+
+    <!-- External Hard Dependencies: Company_Template, Ground_Vehicle_Hover_Template, Hardcell_Transport_Medium -->
+    <!-- External Soft Dependencies: CIS_Vehicle_Factory -->
+
+    <!-- Unit Definition(s) -->
+	<GroundVehicle Name="Rep_A5_RX_Tank">
+		<Variant_Of_Existing_Type>Ground_Vehicle_Tracked_Template</Variant_Of_Existing_Type>
+		<Text_ID>AOTR_TEXT_UNIT_A5RX</Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_CLASS_LRG_VEHICLE
+			AOTR_LAND_ROLE_MBT_ANTI_AIR
+			AOTR_TEXT_EMPTY
+            AOTR_TEXT_TOOLTIP_A5RX
+            AOTR_TEXT_EMPTY
+            AOTR_LAND_WEAPONS_A5RX
+            AOTR_TEXT_EMPTY
+            AOTR_LAND_ARMOR_VH
+            AOTR_LAND_HEALTH_600
+            AOTR_LAND_MOVEMENT_TRACKED
+            AOTR_LAND_SPEED_20
+            AOTR_LAND_RANGE_700
+            AOTR_LAND_FOW_500
+			AOTR_TEXT_EMPTY
+			AOTR_ABILITY_FIRE_ROCKET_BARRAGE
+		</Encyclopedia_Text>
+		<Icon_Name> I_Button_A5RX.tga </Icon_Name>
+
+		<Behavior> SELECTABLE </Behavior>
+		<LandBehavior>DEPLOY, WEAPON, TREAD_SCROLL, ABILITY_COUNTDOWN,AFFECTED_BY_SHIELD, HUNT, WALK_LOCOMOTOR, IDLE, TARGETING, TURRET, POWERED, REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, TELEKINESIS_TARGET,STUNNABLE, WIND_DISTURBANCE, SURFACE_FX,DAMAGE_TRACKING</LandBehavior>
+
+		<Land_Model_Name>REP_A5RX.ALO</Land_Model_Name>
+		<Target_Bones>Target</Target_Bones>
+		<Tread_Scroll_Rate>0.01</Tread_Scroll_Rate>
+		<SurfaceFX_Name>Generic_Track_Wide</SurfaceFX_Name>
+
+		<Affiliation>Empire</Affiliation>
+
+		<Max_Speed> 1.0 </Max_Speed>
+		<Max_Rate_Of_Turn> 1.3333 </Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn> 2.0 </Stopped_Rate_Of_Turn>
+		<OverrideAcceleration> 0.3333 </OverrideAcceleration>
+		<OverrideDeceleration> 0.3333 </OverrideDeceleration>
+
+		<Close_Enough_Angle_For_Move_Start> 60 </Close_Enough_Angle_For_Move_Start>
+
+		<Movement_Animation_Speed> 3.0 </Movement_Animation_Speed>
+		<Ranking_In_Category>6</Ranking_In_Category>
+		<Rotation_Animation_Speed>1.0</Rotation_Animation_Speed>
+
+		<Walk_Transition>Yes</Walk_Transition>
+
+		<Custom_Hard_XExtent>56.0</Custom_Hard_XExtent> 
+		<Custom_Hard_YExtent>25.0</Custom_Hard_YExtent> 
+		<Overall_Length>56.0</Overall_Length>		<!-- For vehicle pitching up and down on terrain -->
+		<Overall_Width>25.0</Overall_Width>		<!-- For vehicle rolling left and right on terrain (30 by geometry)-->
+
+		<FormationGrouping>Standard</FormationGrouping>
+		<FormationOrder>8</FormationOrder>
+		<FormationSpacing>1</FormationSpacing>
+
+		<Deploys>Yes</Deploys>
+		<Attack_Animation_Is_Overlay>Yes</Attack_Animation_Is_Overlay>
+		<Deployment_Anim_Rate>1.0</Deployment_Anim_Rate>
+		<Fire_Weapon_When_Deployed>Yes</Fire_Weapon_When_Deployed>
+		<Fire_Weapon_When_Undeployed>No</Fire_Weapon_When_Undeployed>
+
+		<Auto_Deploys>Yes</Auto_Deploys>
+		<Max_Dist_Walk_While_Deployed>0.01</Max_Dist_Walk_While_Deployed>
+		<Deployed_Walk_Anim_Speed>2</Deployed_Walk_Anim_Speed>
+		<Deployed_Walk_Speed>0.01</Deployed_Walk_Speed>
+
+		<Hardpoints>
+			HP_A5_RX_Missiles,
+			HP_A5_RX_Rockets_01,
+			HP_A5_RX_Rockets_02,
+			HP_A5_RX_Rockets_03,
+			HP_A5_RX_Repeating_BC,
+			HP_A5_RX_Dual_BC_01,
+			HP_A5_RX_Dual_BC_02
+		</Hardpoints>
+
+		<Projectile_Types>Proj_Dummy</Projectile_Types>
+		<Projectile_Fire_Recharge_Seconds>10.0</Projectile_Fire_Recharge_Seconds>
+		<Projectile_Fire_Pulse_Count>12</Projectile_Fire_Pulse_Count>
+		<Projectile_Fire_Pulse_Delay_Seconds>0.01</Projectile_Fire_Pulse_Delay_Seconds>
+
+		<Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+		<Turret_Elevate_Extent_Degrees>30</Turret_Elevate_Extent_Degrees>
+		<Turret_Rotate_Speed>1.0</Turret_Rotate_Speed>
+		<Turret_Bone_Name>MAIN</Turret_Bone_Name>
+		<Barrel_Bone_Name>BARREL</Barrel_Bone_Name>
+		<Turret_Rest_Angle>0.0, 0.0, 0.0</Turret_Rest_Angle>
+		<Turret_Deployed_Rest_Angle>0.0, 0.0, 0.0</Turret_Deployed_Rest_Angle>
+		<Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+		<Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+		<Turret_Targets_Ground_Infantry>4</Turret_Targets_Ground_Infantry>
+		<Turret_Targets_Ground_Vehicles>2</Turret_Targets_Ground_Vehicles>
+		<Turret_Targets_Air_Vehicles>1</Turret_Targets_Air_Vehicles>
+		<Turret_Targets_Anything_Else>3</Turret_Targets_Anything_Else>
+
+		<Land_Damage_Thresholds>1, 0.5, 0.25</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
+
+		<Ranged_Target_Z_Adjust>6.0</Ranged_Target_Z_Adjust>
+
+		<Armor_Type> Armor_Land_Vehicle_Heavy </Armor_Type>
+        <Targeting_Priority_Set>Ground_AntiAirAntiVehicle</Targeting_Priority_Set>
+		<Attack_Category_Restrictions> Infantry | Droid </Attack_Category_Restrictions>
+        <Fire_Category_Restrictions> Infantry, Droid</Fire_Category_Restrictions>
+		<Targeting_Stickiness_Time_Threshold>10.0</Targeting_Stickiness_Time_Threshold>
+
+        <CategoryMask> BigVehicle | AntiAir | AntiVehicle | TrackedVehicle </CategoryMask>
+
+		<AI_Combat_Power>300</AI_Combat_Power>
+
+		<Autoresolve_Health>600</Autoresolve_Health>
+		<Shield_Points>0</Shield_Points>
+		<Tactical_Health>600</Tactical_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+
+		<Tactical_Bribe_Cost>1125</Tactical_Bribe_Cost>
+
+		<Land_FOW_Reveal_Range>500.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.1</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>550.0</Targeting_Max_Attack_Distance>
+
+		<SFXEvent_Select>Unit_Select_Juggernaut</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Juggernaut</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Juggernaut</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Juggernaut</SFXEvent_Guard>
+		<SFXEvent_Assist_Move> Unit_Assist_Move_Juggernaut </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Assist_Attack_Juggernaut</SFXEvent_Assist_Attack>
+
+		<SFXEvent_Engine_Idle_Loop> Unit_Tracked_Idle_Engine_Loop </SFXEvent_Engine_Idle_Loop>
+		<SFXEvent_Engine_Moving_Loop> Unit_Tracked_Moving_Engine_Loop </SFXEvent_Engine_Moving_Loop>
+		<SFXEvent_Unit_Lost> EHD_Unit_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+		<Death_SFXEvent_Start_Die>Unit_Tank_Death_SFX</Death_SFXEvent_Start_Die>
+
+		<Overall_Length>40.0</Overall_Length>		<!-- For vehicle pitching up and down on terrain -->
+		<Overall_Width>25.0</Overall_Width>		<!-- For vehicle rolling left and right on terrain (30 by geometry)-->
+
+		<Lua_Script>ObjectScript_Switch_VehicleMissiles</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>ROCKET_ATTACK</Type>
+				<Recharge_Seconds>30</Recharge_Seconds>
+				<Expiration_Seconds>5.0</Expiration_Seconds>
+				<Alternate_Icon_Name>I_SA_SWAP_ROCKET.tga</Alternate_Icon_Name>
+				<Alternate_Name_Text>AOTR_ABILITY_FIRE_ROCKET_BARRAGE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>AOTR_ABILITY_FIRE_ROCKET_BARRAGE_DESC</Alternate_Description_Text>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Attack_Juggernaut</SFXEvent_GUI_Unit_Ability_Activated>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+	</GroundVehicle>
+
+    <!-- Company Definition(s) -->
+	<GroundCompany Name="Rep_A5_RX_Tank_Company">
+        <Variant_Of_Existing_Type>Company_Template</Variant_Of_Existing_Type>
+        <Text_ID>AOTR_TEXT_UNIT_A5RX_COMPANY</Text_ID>
+        <Encyclopedia_Text>
+			AOTR_LAND_CLASS_LRG_VEHICLE
+			AOTR_LAND_ROLE_MBT_ANTI_AIR
+			AOTR_MANUFACTURER_KDY
+			AOTR_TEXT_EMPTY
+            AOTR_TEXT_TOOLTIP_A5RX
+            AOTR_TEXT_EMPTY
+			AOTR_AMOUNT_2
+            AOTR_LAND_WEAPONS_A5RX
+            AOTR_TEXT_EMPTY
+            AOTR_LAND_ARMOR_VH
+            AOTR_LAND_HEALTH_600
+            AOTR_LAND_MOVEMENT_TRACKED
+            AOTR_LAND_SPEED_20
+            AOTR_LAND_RANGE_700
+            AOTR_LAND_FOW_500
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ABILITIES_FIRE_ROCKET_BARRAGE
+			AOTR_TEXT_EMPTY
+			AOTR_TECH_GROUND_E_LIGHTVEHICLE_3
+        </Encyclopedia_Text>
+        <Encyclopedia_Unit_Class>AOTR_LAND_CLASS_LRG_VEHICLE</Encyclopedia_Unit_Class>
+        <Icon_Name>I_Button_A5RX.tga</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>3000</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Cheap_Bribe_Cost>41</Cheap_Bribe_Cost>
+        <Expensive_Bribe_Cost>41</Expensive_Bribe_Cost>
+        <Required_Special_Structures>Rep_Ground_Medium_Vehicle_Factory</Required_Special_Structures>
+        <Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+        <Required_Star_Base_Level>0</Required_Star_Base_Level>
+
+        <Company_Transport_Unit>Rep_LAATC_AT_TE</Company_Transport_Unit>
+        <Company_Units>
+            Rep_A5_RX_Tank,
+        </Company_Units>
+        <Formation_Priority>3</Formation_Priority>
+
+        <SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>Unit_Complete_Juggernaut</SFXEvent_Build_Complete>
+        <SFXEvent_Fleet_Move>Unit_Fleet_Move_Juggernaut</SFXEvent_Fleet_Move>
+
+        <Tactical_Build_Cost_Multiplayer>410</Tactical_Build_Cost_Multiplayer>
+        <Tactical_Build_Time_Seconds>11</Tactical_Build_Time_Seconds>
+        <Tactical_Build_Prerequisites>UC_Level_Two_Tech_Upgrade</Tactical_Build_Prerequisites>
+    </GroundCompany>
+
+	
+
+</GroundVehicles>

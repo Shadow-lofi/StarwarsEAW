@@ -1,0 +1,527 @@
+<?xml version="1.0"?>
+
+<SpecialStructures>
+
+    <!-- External Hard Dependencies: Ground_Building_Template, UPGRADE_TEMPLATE, UPGRADE_TEMPLATE_DUMMY -->
+    <!-- External Soft Dependencies: -->
+
+    <!-- Unit Definition(s) -->
+	<SpecialStructure Name="Rep_Ground_Light_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Ground_Building_Template</Variant_Of_Existing_Type>
+		<GUI_Bounds_Scale>0.45</GUI_Bounds_Scale>
+		<Text_ID>TEXT_GROUND_LIGHT_VEHICLE_FACTORY</Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+            AOTCW_TOOLTIP_REP_LIGHT_FACTORY
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_LIGHT_FACTORY
+			AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_20
+		</Encyclopedia_Text>
+		<Icon_Name>I_BUTTON_E_LIGHT_VEHICLE_FACTORY.tga</Icon_Name>
+		<MP_Encyclopedia_Text>AOTR_IMPERIALFACTORY_TOOL </MP_Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>TEXT_ENCYCLOPEDIA_CLASS_STRUCTURE</Encyclopedia_Unit_Class>
+		<GUI_Row> 0 </GUI_Row>
+		<!-- was EB_LightFactory -->
+		<Land_Model_Name>EB_LightFactory.alo</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Loop_Idle_Anim_00>Yes</Loop_Idle_Anim_00>
+		<SFXEvent_Ambient_Loop>Structure_Barracks_Loop</SFXEvent_Ambient_Loop>
+		<Behavior>DUMMY_GROUND_STRUCTURE</Behavior>
+		<LandBehavior>SPACE_OBSTACLE, LAND_OBSTACLE,REVEAL,SELECTABLE, HIDE_WHEN_FOGGED,DAMAGE_TRACKING,DUMMY_LAND_BASE_LEVEL_COMPONENT,UNIT_AI,TERRAIN_TEXTURE_MODIFICATION,SPAWN_SQUADRON,EARTHQUAKE_TARGET, STUNNABLE,ION_STUN_EFFECT</LandBehavior>
+
+		<Multisample_FOW_Check>Yes</Multisample_FOW_Check>
+		<Last_State_Visible_Under_FOW> Yes </Last_State_Visible_Under_FOW>
+		<Initial_State_Visible_Under_FOW>False</Initial_State_Visible_Under_FOW>
+		<Terrain_Texture_Modifier_Material>62</Terrain_Texture_Modifier_Material>
+		<Terrain_Texture_Modifier_Join_Distance>1.0</Terrain_Texture_Modifier_Join_Distance>
+		<Terrain_Texture_Modifier_Square>true</Terrain_Texture_Modifier_Square>
+		<Land_FOW_Reveal_Range>300.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.1</Dense_FOW_Reveal_Range_Multiplier>
+		<Is_Community_Property>Yes</Is_Community_Property>
+		<Collidable_By_Projectile_Living>Yes</Collidable_By_Projectile_Living>
+		<Death_Explosions>Huge_Explosion_Land</Death_Explosions>
+		<Ranged_Target_Z_Adjust>5.0</Ranged_Target_Z_Adjust>
+		<Is_Visible_On_Radar>Yes</Is_Visible_On_Radar>
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Select_Box_Scale>180</Select_Box_Scale>
+		<Mass>1.0</Mass>
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+		<Is_Dummy>No</Is_Dummy>
+		<Influences_Capture_Point>False</Influences_Capture_Point>
+		<Death_Clone_Is_Obstacle> true </Death_Clone_Is_Obstacle>
+		<Armor_Type> Armor_Land_Building </Armor_Type>
+		<Reveal_During_Setup_Phase> true </Reveal_During_Setup_Phase>
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+		<Affiliation>Empire</Affiliation>
+		<Political_Control>0</Political_Control>
+
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Size_Value>50</Size_Value>
+		<Base_Position>In_Base</Base_Position>
+		<Tech_Level>99</Tech_Level>
+		<Required_Timeline>0</Required_Timeline>
+		<Required_Ground_Base_Level>0</Required_Ground_Base_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Required_Special_Structures/>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+
+		<Damage>5</Damage>
+		<AI_Combat_Power>26.6</AI_Combat_Power>
+		<Tactical_Health>1000</Tactical_Health>
+		<Build_Cost_Credits>3000</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Sabotage_Cost_Credits>2000</Sabotage_Cost_Credits>
+		<Score_Cost_Credits> 400 </Score_Cost_Credits>
+
+		<Victory_Relevant>No</Victory_Relevant>
+		<No_Reflection_Below_Detail_Level>1</No_Reflection_Below_Detail_Level>
+		<No_Refraction_Below_Detail_Level>1</No_Refraction_Below_Detail_Level>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Light_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Light_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Heavy_Factory_Select_SFX</SFXEvent_Select>
+		<Sabotage_Cost_Credits>1000</Sabotage_Cost_Credits>
+		<Death_Explosions>Large_Explosion_Land</Death_Explosions>
+		<CategoryMask> Structure </CategoryMask>
+		<!-- The ground structures have this data which looks like it's space only because the
+		snowspeeders are using space style pathfinding which needs this information so that we won't
+		path speeders through structures -->
+		<Space_Obstacle_Offset> 0 0 0 </Space_Obstacle_Offset>
+		<Space_Layer> Corvette </Space_Layer>
+		<Has_Land_Evaluator>True</Has_Land_Evaluator>
+
+		<Obstacle_Proxy_Type> E_Ground_Light_Vehicle_Factory_Build_Pad </Obstacle_Proxy_Type>
+		<Tactical_Buildable_Objects_Multiplayer> 
+			<!-- Empire, -->
+		</Tactical_Buildable_Objects_Multiplayer>
+
+		<Starting_Spawned_Units_Tech_0>Rep_AT_RT, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_AT_RT, 4</Reserve_Spawned_Units_Tech_0>
+
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>200.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>False</Spawn_Garrison_On_Load>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-20</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+			<Force_Healing_Ability Name="E_Light_Vehicle_Factory_Self_Repair">
+				<Activation_Style>Skirmish_Automatic</Activation_Style>
+				<Heal_Range>0.0</Heal_Range>
+				<Heal_Percent>0.025</Heal_Percent>
+				<Heal_Amount>0.0</Heal_Amount>
+				<Heal_Interval_In_Secs>5.0</Heal_Interval_In_Secs>
+				<Single_Target_Heal>Yes</Single_Target_Heal>
+				<Applicable_Unit_Categories/>
+				<Applicable_Unit_Types/>
+				<SFXEvent_Target_Affected/>
+				<Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+				<Owner_Light_Effect_Type>Color_Flash</Owner_Light_Effect_Type>
+				<Owner_Light_Effect_Color>1.2, 1.2, 1.2</Owner_Light_Effect_Color>
+				<Owner_Light_Effect_Color2/>
+				<Owner_Light_Effect_Duration>0.6</Owner_Light_Effect_Duration>
+				<Owner_Light_Effect_Pulse_Count>1</Owner_Light_Effect_Pulse_Count>
+			</Force_Healing_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<SpecialStructure Name="Rep_Ground_Light_Vehicle_Factory_SPAWNER">
+		<Variant_Of_Existing_Type>Rep_Ground_Light_Vehicle_Factory</Variant_Of_Existing_Type>
+		<Lua_Script>Upgrade_Republic_Factory</Lua_Script>
+		<Tech_Level>0</Tech_Level>
+	</SpecialStructure>
+
+	<GroundCompany Name="Upgrade_Factory_Light_To_Medium">
+		<Text_ID>AOTR_TEXT_UPGRADE_R_FACTORY_LIGHT_TO_MEDIUM</Text_ID>
+		<Icon_Name>I_BUTTON_Upgrade_Rep_Medium_Factory.tga</Icon_Name>
+		<Encyclopedia_Text> 
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_R_FACTORY_LIGHT_TO_MEDIUM_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TOOLTIP_REP_MEDIUM_FACTORY
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_MEDIUM_FACTORY
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_40
+		</Encyclopedia_Text>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Required_Special_Structures> Rep_Ground_Light_Vehicle_Factory </Required_Special_Structures>
+		<Build_Cost_Credits>4000</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Affiliation>Empire</Affiliation>
+		
+		<Required_Planets>
+			Abregado_Rae, Bakura, Dubrillion, Mygeeto, OrdMantell, Raxus_Secundus, MonCalimari,
+			Pammant, Saleucami, Colla, Coruscant, Fresia,
+			Umbara, Bilbringi, Tibrin, Bothawui, Utapau,
+			Eriadu, Pako_Ramoon, Mechis, Corellia,
+			Yaga_Minor, AetenII, Raxus_Prime, Charros, Nimban,
+			Kuat, Aridus, Corulag, Rothana, Hypori,
+			Geonosis, Sluis_Van, Sullust, Mustafar, Fondor,
+			Rendili, Foerost, Mandalore,
+
+			Abregado_Rae_Big, Bakura_Big, Dubrillion_Big, Mygeeto_Big, OrdMantell_Big, Raxus_Secundus_Big, MonCalimari_Big,
+			Pammant_Big, Saleucami_Big, Colla_Big, Coruscant_Big, Fresia_Big,
+			Umbara_Big, Bilbringi_Big, Tibrin_Big, Bothawui_Big, Utapau_Big,
+			Eriadu_Big, Pako_Ramoon_Big, Mechis_Big, Corellia_Big,
+			Yaga_Minor_Big, AetenII_Big, Raxus_Prime_Big, Charros_Big, Nimban_Big,
+			Kuat_Big, Aridus_Big, Corulag_Big, Rothana_Big, Hypori_Big,
+			Geonosis_Big, Sluis_Van_Big, Sullust_Big, Mustafar_Big, Fondor_Big,
+			Rendili_Big, Foerost_Big, Mandalore_Big,
+
+			Bonadan_Big, Ghorman_Big, Telos_Big, Falleen_Big, Balmorra_Big, Bestine_Big, 
+			Ubrikkia_Big, Ciutric_Big, Clak_Dor_Big, Vulpter_Big, Kothlis_Big,
+			Milagro_Big, Giju_Big, Hosnian_Prime_Big, Denon_Big, Koensayr_Big,
+			Sleheyron_Big, Centares_Big, Sy_Myrth_Big, Lianna_Big, Chardaan_Big,
+			Garos_Big, Metalorn_Big, Murkhana_Big, Castell_Big, Kerkoidia_Big,
+		</Required_Planets>
+
+		<GUI_Row> 0 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>Upgrade_Factory_Light_To_Medium_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="Upgrade_Factory_Light_To_Medium_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Factory</Lua_Script>
+		<AI_Combat_Power>400</AI_Combat_Power>
+	</GroundVehicle>
+
+	<SpecialStructure Name="Rep_Ground_Medium_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Ground_Building_Template</Variant_Of_Existing_Type>
+		<!-- Noch zu machen -->
+		<Text_ID>TEXT_GROUND_MEDIUM_VEHICLE_FACTORY</Text_ID>
+		<Icon_Name>i_button_e_advanced_weapons.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+            AOTCW_TOOLTIP_REP_MEDIUM_FACTORY
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_MEDIUM_FACTORY
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_40
+		</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>AOTCW_REP_MEDIUM_FACTORY_ENC</MP_Encyclopedia_Text>
+		<Sabotage_Cost_Credits>4000</Sabotage_Cost_Credits>
+		<Tutorial_Sabotage_Cost_Credits>4000</Tutorial_Sabotage_Cost_Credits>
+		<Build_Cost_Credits>7000</Build_Cost_Credits>
+		<Land_Model_Name>EB_VehicleFactory.alo</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<!-- was 60 -->
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Required_Special_Structures>Rep_Ground_Light_Vehicle_Factory</Required_Special_Structures>
+		<Required_Planets/>
+
+		<AI_Combat_Power>33</AI_Combat_Power>
+		<Damage>2</Damage>
+		<Shield_Points>0</Shield_Points>
+		<Armor_Type> Armor_Land_Building </Armor_Type>
+		<Tactical_Health>2000</Tactical_Health>
+		<Autoresolve_Health>2000</Autoresolve_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+		<Build_Tab_Special_Structures>No</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Tech_Level> 0 </Tech_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Tactical_Buildable_Objects_Multiplayer/>
+		<Affiliation>Empire</Affiliation>
+		<Victory_Relevant>No</Victory_Relevant>
+
+		<Starting_Spawned_Units_Tech_0>AT_TE_Walker, 3</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>AT_TE_Walker, 600</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Rep_AT_RT, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_AT_RT, 400</Reserve_Spawned_Units_Tech_0>
+
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>200.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>False</Spawn_Garrison_On_Load>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Heavy_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Heavy_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Heavy_Factory_Select_SFX</SFXEvent_Select>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-40</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+
+	</SpecialStructure>
+
+	<GroundCompany Name="Upgrade_Factory_Medium_To_Light">
+		<Text_ID>AOTR_TEXT_UPGRADE_R_FACTORY_MEDIUM_TO_LIGHT</Text_ID>
+		<Icon_Name>I_BUTTON_Downgrade_Rep_Light_Factory.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_R_FACTORY_MEDIUM_TO_LIGHT_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TOOLTIP_REP_LIGHT_FACTORY
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_LIGHT_FACTORY
+			AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_20
+		</Encyclopedia_Text>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Required_Special_Structures> Rep_Ground_Medium_Vehicle_Factory </Required_Special_Structures>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>1</Build_Cost_Credits>
+		<Build_Time_Seconds>40</Build_Time_Seconds>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>Upgrade_Factory_Medium_To_Light_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="Upgrade_Factory_Medium_To_Light_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Factory</Lua_Script>
+		<AI_Combat_Power>25</AI_Combat_Power>
+	</GroundVehicle>
+
+	<SpecialStructure Name="Rep_Ground_Heavy_Vehicle_Factory">
+		<Variant_Of_Existing_Type>Ground_Building_Template</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_GROUND_HEAVY_VEHICLE_FACTORY</Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+            AOTCW_TOOLTIP_REP_HEAVY_FACTORY
+            AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_3000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_HEAVY_FACTORY
+			AOTR_TEXT_EMPTY
+			AOTR_UPKEEP_75
+		</Encyclopedia_Text>
+		<MP_Encyclopedia_Text>AOTCW_REP_HEAVY_FACTORY_ENC</MP_Encyclopedia_Text>
+		<Icon_Name>i_button_e_mega_advanced_weapons.tga</Icon_Name>
+		<Land_Model_Name>EB_MegaAdvancedWeapons.alo</Land_Model_Name>
+		<Scale_Factor>2.0</Scale_Factor>
+		<Damage>3</Damage>
+		<AI_Combat_Power>50</AI_Combat_Power>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Build_Cost_Credits>12000</Build_Cost_Credits>
+		<!-- was 116 -->
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<Sabotage_Cost_Credits>3000</Sabotage_Cost_Credits>
+		<Score_Cost_Credits>600</Score_Cost_Credits>
+		
+		<Shield_Points>0</Shield_Points>
+		<Armor_Type> Armor_Land_Building </Armor_Type>
+		<Tactical_Health>3000</Tactical_Health>
+		<Autoresolve_Health>3000</Autoresolve_Health>
+		<Shield_Refresh_Rate>0</Shield_Refresh_Rate>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+		<GUI_Row> 0 </GUI_Row>
+		<Ranged_Target_Z_Adjust>20.0</Ranged_Target_Z_Adjust>
+		<Build_Tab_Special_Structures>Yes</Build_Tab_Special_Structures>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<Tech_Level>99</Tech_Level>
+		<Required_Star_Base_Level>0</Required_Star_Base_Level>
+		<Tactical_Buildable_Objects_Multiplayer/>
+		<Affiliation>Empire</Affiliation>
+		<Victory_Relevant>No</Victory_Relevant>
+
+		<Starting_Spawned_Units_Tech_0>HAV_Juggernaut, 1</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>HAV_Juggernaut, 6</Reserve_Spawned_Units_Tech_0>
+
+		<Starting_Spawned_Units_Tech_0>Rep_AT_RT, 2</Starting_Spawned_Units_Tech_0>
+		<Reserve_Spawned_Units_Tech_0>Rep_AT_RT, 400</Reserve_Spawned_Units_Tech_0>
+
+		<Spawned_Squadron_Delay_Seconds>0</Spawned_Squadron_Delay_Seconds>
+		<Spawned_Squadron_Location_Bones>SPAWN_00</Spawned_Squadron_Location_Bones>
+		<Spawned_Squadron_Location_Flyout_Distances>200.0</Spawned_Squadron_Location_Flyout_Distances>
+		<Spawn_Garrison_On_Load>False</Spawn_Garrison_On_Load>
+
+		<Land_Damage_Thresholds>1, 0.66, 0.33, 0</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2, 3</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation,null</Land_Damage_SFX>
+		<SFXEvent_Build_Started>EHD_Build_Structure</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Building_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Construction_Complete</SFXEvent_Build_Complete>
+		<Death_SFXEvent_Start_Die>Unit_Generic_Building_Death_SFX</Death_SFXEvent_Start_Die>
+		<SFXEvent_Unit_Under_Attack> EHD_Advanced_Vehicle_Factory_Under_Attack </SFXEvent_Unit_Under_Attack>
+		<SFXEvent_Unit_Lost> EHD_Advanced_Vehicle_Factory_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Select>Structure_Light_Factory_Select_SFX</SFXEvent_Select>
+
+		<Abilities SubObjectList="Yes">
+			<Planet_Income_Bonus_Ability Name="Structure_Upkeep">
+				<!--<Specific_Mod_Source_Text>AOTR_TEXT_ECONOMY_STEUERN</Specific_Mod_Source_Text>-->
+				<!-- 3% bonus to base planetary income -->
+				<Percentage_Income_Modifier>0</Percentage_Income_Modifier>
+				<!-- plus an absolute 0 credits to planetary income -->
+				<Absolute_Income_Modifier>-75</Absolute_Income_Modifier>
+				<!-- net effect of +( (base income * 0%) + 20) credits -->
+				<Additional_Multiplier_On_Mining_Colonies>0.0</Additional_Multiplier_On_Mining_Colonies>
+				<!-- net result above multiplied by 2.0 if the affected planet is a mining colony -->
+			</Planet_Income_Bonus_Ability>
+		</Abilities>
+	</SpecialStructure>
+
+	<GroundCompany Name="Upgrade_Factory_Medium_To_Heavy">
+		<Text_ID>AOTR_TEXT_UPGRADE_R_FACTORY_MEDIUM_TO_HEAVY</Text_ID>
+		<Icon_Name>I_BUTTON_Upgrade_Rep_Heavy_Factory.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_R_FACTORY_MEDIUM_TO_HEAVY_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TOOLTIP_REP_HEAVY_FACTORY
+            AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_3000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_HEAVY_FACTORY
+			AOTR_TEXT_EMPTY
+			AOTR_UPKEEP_75
+		</Encyclopedia_Text>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Required_Special_Structures> Rep_Ground_Medium_Vehicle_Factory </Required_Special_Structures>
+		<Affiliation>Empire</Affiliation>
+
+		<Required_Planets>
+			Yaga_Minor, AetenII, Raxus_Prime, Charros, Nimban,
+			Kuat, Aridus, Corulag, Rothana, Hypori,
+			Geonosis, Sluis_Van, Sullust, Mustafar, Fondor,
+			Rendili, Foerost, Mandalore,
+
+			Yaga_Minor_Big, AetenII_Big, Raxus_Prime_Big, Charros_Big, Nimban_Big,
+			Kuat_Big, Aridus_Big, Corulag_Big, Rothana_Big, Hypori_Big,
+			Geonosis_Big, Sluis_Van_Big, Sullust_Big, Mustafar_Big, Fondor_Big,
+			Rendili_Big, Foerost_Big, Mandalore_Big,
+
+			Ghorman_Big, Falleen_Big, Balmorra_Big, Ubrikkia_Big, Vulpter_Big,
+			Milagro_Big, Hosnian_Prime_Big, Denon_Big, Koensayr_Big, Centares_Big,
+			Sy_Myrth_Big, Kerkoidia_Big,
+		</Required_Planets>
+
+		<Build_Cost_Credits>5000</Build_Cost_Credits>
+		<Build_Time_Seconds>1</Build_Time_Seconds>
+		<GUI_Row> 0 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>Upgrade_Factory_Medium_To_Heavy_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+
+	<GroundVehicle Name="Upgrade_Factory_Medium_To_Heavy_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Factory</Lua_Script>
+		<AI_Combat_Power>500</AI_Combat_Power>
+	</GroundVehicle>
+
+	<GroundCompany Name="Upgrade_Factory_Heavy_To_Medium">
+		<Text_ID>AOTR_TEXT_UPGRADE_R_FACTORY_HEAVY_TO_MEDIUM</Text_ID>
+		<Icon_Name>I_BUTTON_Downgrade_Rep_Medium_Factory.tga</Icon_Name>
+		<Encyclopedia_Text>
+			AOTR_LAND_ROLE_PRODUCTION_FACILITY
+			AOTR_TEXT_EMPTY
+			AOTR_TEXT_UPGRADE_R_FACTORY_HEAVY_TO_MEDIUM_ENC
+			AOTR_TEXT_EMPTY
+			AOTCW_TOOLTIP_REP_MEDIUM_FACTORY
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_B
+			AOTR_LAND_HEALTH_2000
+			AOTR_LAND_FOW_300
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_GARRISON_REP_MEDIUM_FACTORY
+            AOTR_TEXT_EMPTY
+            AOTR_UPKEEP_40
+		</Encyclopedia_Text>
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE</Variant_Of_Existing_Type>
+		<Required_Special_Structures> Rep_Ground_Heavy_Vehicle_Factory </Required_Special_Structures>
+		<Affiliation>Empire</Affiliation>
+		<Build_Cost_Credits>1</Build_Cost_Credits>
+		<Build_Time_Seconds>80</Build_Time_Seconds>
+		<GUI_Row> 1 </GUI_Row>
+		<Tech_Level>0</Tech_Level>
+		<Is_Stealth_Company>Yes</Is_Stealth_Company>
+		<Company_Units>Upgrade_Factory_Heavy_To_Medium_DUMMY</Company_Units>
+		<Build_Max_Instances_Per_Planet> 1 </Build_Max_Instances_Per_Planet>
+		<SFXEvent_Build_Started>EHD_Upgrade_Under_Construction</SFXEvent_Build_Started>
+		<SFXEvent_Build_Cancelled>EHD_Upgrade_Canceled</SFXEvent_Build_Cancelled>
+		<SFXEvent_Build_Complete>EHD_Upgrade_Complete</SFXEvent_Build_Complete>
+		<Build_Initially_Locked>No</Build_Initially_Locked>
+	</GroundCompany>
+	
+	<GroundVehicle Name="Upgrade_Factory_Heavy_To_Medium_DUMMY">
+		<Variant_Of_Existing_Type>UPGRADE_TEMPLATE_DUMMY</Variant_Of_Existing_Type>
+		<Stay_In_Transport_During_Ground_Battle>Yes</Stay_In_Transport_During_Ground_Battle>
+		<Lua_Script>Upgrade_Republic_Factory</Lua_Script>
+	</GroundVehicle>
+
+</SpecialStructures>

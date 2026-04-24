@@ -1,0 +1,232 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FighterUnits>
+
+    <!-- External Hard Dependencies: SpaceUnit_Bomber_Shielded_Template -->
+    <!-- External Soft Dependencies:  -->
+
+    <!-- Unit Definition(s) -->
+    <SpaceUnit Name="Rep_BTN_H7">
+        <Variant_Of_Existing_Type>SpaceUnit_Bomber_Shielded_Template</Variant_Of_Existing_Type>
+        <Text_ID>AOTR_TEXT_UNIT_BTN_H7</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_SPACE_CLASS_BOMBER
+            AOTR_SPACE_ROLE_BOMBER
+            AOTR_MANUFACTURER_KOENSAYR
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_TOOLTIP_BTN_H7
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_SHIELD_ANTILC_SLOW_20
+            AOTR_SPACE_HULL_FIGHTER_25
+            AOTR_SPACE_MOVEMENT_VLOW_TURN_300
+            AOTR_SPACE_SENSOR_1500
+            AOTR_SPACE_RANGE_1000_500
+            AOTR_SPACE_WEAPONS_BTN_H7
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_PASSIVES_ASTROMECH
+        </Encyclopedia_Text>
+        <Icon_Name>I_Button_BTN_H7.tga</Icon_Name>
+        <Space_Model_Name>REP_BTN-H7.ALO</Space_Model_Name>
+
+        <Max_Speed>3.0</Max_Speed>
+        <Min_Speed>2.25</Min_Speed>
+        <Max_Rate_Of_Turn>0.75</Max_Rate_Of_Turn>
+        <Max_Lift>0.75</Max_Lift>
+        <Max_Thrust>1.0</Max_Thrust>
+        <Max_Rate_Of_Roll>0.75</Max_Rate_Of_Roll>
+        <Bank_Turn_Angle>90</Bank_Turn_Angle>
+        <Hyperspace>Yes</Hyperspace>
+
+        <Affiliation>Empire</Affiliation>
+
+        <AI_Combat_Power>75</AI_Combat_Power>
+        <Autoresolve_Health>35</Autoresolve_Health>
+
+        <Shield_Points>100</Shield_Points>
+        <Shield_Refresh_Rate>0.5</Shield_Refresh_Rate>
+        <Energy_Capacity>120</Energy_Capacity>
+        <Energy_Refresh_Rate>0.1</Energy_Refresh_Rate>
+        <Tactical_Health>125</Tactical_Health>
+
+        <Armor_Type>Armor_Space_Fighter</Armor_Type>
+        <Shield_Armor_Type>Shield_Space_AntiLC_Fighter</Shield_Armor_Type>
+
+        <Is_Bomber>yes</Is_Bomber>
+        <Ship_Class>bomber</Ship_Class>
+        <Land_Bomber_Type>BTN_H7_Bombing_Run</Land_Bomber_Type>
+
+        <Death_Explosions>Fighter_Explosion_Space</Death_Explosions>
+        <Death_SFXEvent_Start_Die>Unit_Y_Wing_Death_SFX</Death_SFXEvent_Start_Die>
+
+        <SpaceBehavior>TURRET, SHIELDED, REVEAL, HUNT, WEAPON, FIGHTER_LOCOMOTOR, SELECTABLE, ABILITY_COUNTDOWN, TARGETING, POWERED, HIDE_WHEN_FOGGED, AMBIENT_SFX, DAMAGE_TRACKING, NEBULA</SpaceBehavior>
+
+        <Turret_Rotate_Extent_Degrees>360</Turret_Rotate_Extent_Degrees>
+        <Turret_Elevate_Extent_Degrees>5</Turret_Elevate_Extent_Degrees>
+        <Turret_Bone_Name>Turret</Turret_Bone_Name>
+        <Barrel_Bone_Name>Barrel</Barrel_Bone_Name>
+        <Turret_Rotate_Speed>5.0</Turret_Rotate_Speed>
+        <Apply_Z_Turret_Rotate_To_Axis>2</Apply_Z_Turret_Rotate_To_Axis>
+        <Apply_Y_Turret_Rotate_To_Axis>1</Apply_Y_Turret_Rotate_To_Axis>
+
+        <HardPoints>
+            HP_BTN_H7_Ions,
+            HP_BTN_H7_Turret_Lasers,
+            HP_BTN_H7_Torp
+        </HardPoints>
+
+        <Targeting_Max_Attack_Distance>1000.0</Targeting_Max_Attack_Distance>
+
+        <SFXEvent_Select>PDF_Bomber_Select</SFXEvent_Select>
+        <SFXEvent_Move>PDF_Bomber_Move</SFXEvent_Move>
+        <SFXEvent_Fleet_Move>PDF_Bomber_Move</SFXEvent_Fleet_Move>
+        <SFXEvent_Attack>PDF_Bomber_Attack</SFXEvent_Attack>
+        <SFXEvent_Guard>PDF_Bomber_Move</SFXEvent_Guard>
+        <SFXEvent_Assist_Move>PDF_Bomber_Move</SFXEvent_Assist_Move>
+        <SFXEvent_Assist_Attack>PDF_Bomber_Attack</SFXEvent_Assist_Attack>
+        <SFXEvent_Move_Into_Asteroid_Field>PDF_Bomber_Move</SFXEvent_Move_Into_Asteroid_Field>
+        <SFXEvent_Move_Into_Nebula>PDF_Bomber_Move</SFXEvent_Move_Into_Nebula>
+
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_LASER, PDF_Bomber_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_MISSILE, PDF_Bomber_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_TORPEDO, PDF_Bomber_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_WEAPON_ION_CANNON, PDF_Bomber_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_SHIELD_GENERATOR, PDF_Bomber_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_ENGINE, PDF_Bomber_Attack</SFXEvent_Attack_Hardpoint>
+        <SFXEvent_Attack_Hardpoint>HARD_POINT_GRAVITY_WELL, PDF_Bomber_Attack</SFXEvent_Attack_Hardpoint>
+
+        <SFXEvent_Ambient_Moving>YWing_Fly_By</SFXEvent_Ambient_Moving>
+        <SFXEvent_Ambient_Moving_Min_Delay_Seconds>5</SFXEvent_Ambient_Moving_Min_Delay_Seconds>
+        <SFXEvent_Ambient_Moving_Max_Delay_Seconds>10</SFXEvent_Ambient_Moving_Max_Delay_Seconds>
+        <SFXEvent_Engine_Cinematic_Focus_Loop>YWing_Eng_Idle_Loop</SFXEvent_Engine_Cinematic_Focus_Loop>
+
+        <CategoryMask>Bomber | AntiMedium</CategoryMask>
+        <Targeting_Priority_Set>Space_Bomber_AntiMedium</Targeting_Priority_Set>
+
+        <Spin_Away_On_Death_Explosion>Fighter_Explosion_Space</Spin_Away_On_Death_Explosion>
+        <Spin_Away_On_Death_SFXEvent_Start_Die>Unit_Y_Wing_Spinning_By</Spin_Away_On_Death_SFXEvent_Start_Die>
+
+        <Unit_Abilities_Data SubObjectList="Yes">
+            <Unit_Ability>
+                <Type>HUNT</Type>
+            </Unit_Ability>
+        </Unit_Abilities_Data>
+
+        <Abilities SubObjectList="Yes">
+            <Force_Healing_Ability Name="Repair_Fighter_Light">
+                <Activation_Style>Space_Automatic</Activation_Style>
+                <Heal_Range>0.0</Heal_Range>
+                <Heal_Percent>0.01</Heal_Percent>
+                <Heal_Amount>0.0</Heal_Amount>
+                <Heal_Interval_In_Secs>3.0</Heal_Interval_In_Secs>
+                <Single_Target_Heal>No</Single_Target_Heal>
+                <Applicable_Unit_Categories/>
+                <Applicable_Unit_Types/>
+                <SFXEvent_Target_Affected/>
+                <Owner_Particle_Bone_Name>ROOT</Owner_Particle_Bone_Name>
+                <Owner_Light_Effect_Type/>
+                <Owner_Light_Effect_Color/>
+                <Owner_Light_Effect_Color2/>
+                <Owner_Light_Effect_Duration/>
+                <Owner_Light_Effect_Pulse_Count/>
+            </Force_Healing_Ability>
+        </Abilities>
+    </SpaceUnit>
+
+    <!-- Squadron Definition(s) -->
+    <Squadron Name="Rep_BTN_H7_S">
+        <Text_ID>AOTR_TEXT_UNIT_BTN_H7_SQUADRON</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_SPACE_CLASS_BOMBER
+            AOTR_SPACE_ROLE_BOMBER
+            AOTR_MANUFACTURER_KOENSAYR
+            AOTR_TEXT_EMPTY
+            AOTR_TEXT_TOOLTIP_BTN_H7
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_SHIELD_ANTILC_SLOW_20
+            AOTR_SPACE_HULL_FIGHTER_25
+            AOTR_SPACE_MOVEMENT_VLOW_TURN_300
+            AOTR_SPACE_SENSOR_1500
+            AOTR_SPACE_RANGE_1000_500
+            AOTR_SPACE_WEAPONS_BTN_H7
+            AOTR_SPACE_SQUADRON_SIZE_6
+            AOTR_TEXT_EMPTY
+            AOTR_SPACE_PASSIVES_ASTROMECH
+            AOTR_SPACE_CAPABILITIES_BOMBING_RUN
+        </Encyclopedia_Text>
+        <Encyclopedia_Good_Against/>
+        <Encyclopedia_Vulnerable_To/>
+        <Icon_Name>I_Button_BTN_H7.tga</Icon_Name>
+
+        <GUI_Row>0</GUI_Row>
+        <Is_Dummy>Yes</Is_Dummy>
+        <Formation_Priority>2</Formation_Priority>
+        <Is_Escort>No</Is_Escort>
+        <Is_Bomber>yes</Is_Bomber>
+        <Autoresolve_Health>2210</Autoresolve_Health>
+        <AI_Combat_Power>450</AI_Combat_Power>
+        <Damage>820</Damage>
+        <Affiliation>Empire</Affiliation>
+        <Political_Control>0</Political_Control>
+        <Build_Cost_Credits>900</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Piracy_Value_Credits>25</Piracy_Value_Credits>
+        <Tactical_Bribe_Cost>71</Tactical_Bribe_Cost>
+        <Score_Cost_Credits>720</Score_Cost_Credits>
+        <Build_Tab_Space_Units>Yes</Build_Tab_Space_Units>
+        <Build_Initially_Locked>No</Build_Initially_Locked>
+        <Build_Can_Be_Unlocked_By_Slicer>No</Build_Can_Be_Unlocked_By_Slicer>
+        <Slice_Cost_Credits>400</Slice_Cost_Credits>
+        <Tech_Level>0</Tech_Level>
+        <Required_Timeline/>
+        <Required_Star_Base_Level>1</Required_Star_Base_Level>
+        <Required_Special_Structures></Required_Special_Structures>
+        <Build_Time_Reduced_By_Multiple_Factories>Yes</Build_Time_Reduced_By_Multiple_Factories>
+        <Behavior>DUMMY_SPACE_FIGHTER_SQUADRON</Behavior>
+        <SpaceBehavior>ABILITY_COUNTDOWN</SpaceBehavior>
+        <Squadron_Units>Rep_BTN_H7, Rep_BTN_H7</Squadron_Units>
+        <Max_Squad_Size>6</Max_Squad_Size>
+        <!--DOUBLE V BEHIND FORMATION-->
+        <Squadron_Offsets>120.0,0.0,0.0</Squadron_Offsets>
+        <Squadron_Offsets>60.0,-45.0,30.0</Squadron_Offsets>
+        <Squadron_Offsets>60.0,45.0,30.0</Squadron_Offsets>
+        <Squadron_Offsets>-120.0,0.0,60.0</Squadron_Offsets>
+        <Squadron_Offsets>-180.0,-45.0,90.0</Squadron_Offsets>
+        <Squadron_Offsets>-180.0,45.0,90.0</Squadron_Offsets>
+        <GUI_Model_Name>RV_ywing.ALO</GUI_Model_Name>
+        <GUI_Distance>120</GUI_Distance>
+        <GUI_Offset>0 0 0</GUI_Offset>
+        <GUI_Velocity>45</GUI_Velocity>
+
+        <SFXEvent_Build_Started>EHD_Build_Unit</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Unit_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>Clone_Fighter_Select</SFXEvent_Build_Complete>
+        
+        <FormationOrder>3</FormationOrder>
+        <Squadron_Formation_Error_Tolerance>100.0</Squadron_Formation_Error_Tolerance>
+        <Space_FOW_Reveal_Range>1000.0</Space_FOW_Reveal_Range>
+        <Dense_FOW_Reveal_Range_Multiplier>0.2</Dense_FOW_Reveal_Range_Multiplier>
+        <Guard_Chase_Range>200.0</Guard_Chase_Range>
+        <Idle_Chase_Range>1000.0</Idle_Chase_Range>
+        <Attack_Move_Response_Range>300.0</Attack_Move_Response_Range>
+        <Autonomous_Move_Extension_Vs_Attacker>300.0</Autonomous_Move_Extension_Vs_Attacker>
+        <Property_Flags>SmallShip</Property_Flags>
+        <!-- if we have a targeted ability, we'll need a team object to attach this ability to -->
+        <Max_Squad_Size>6</Max_Squad_Size>
+
+        <Unit_Abilities_Data SubObjectList="Yes">
+            <Unit_Ability>
+                <Type>HUNT</Type>
+            </Unit_Ability>
+        </Unit_Abilities_Data>
+        <!--<MULTIPLAYER SKIRMISH VALUES BEGIN>-->
+        <Tactical_Build_Cost_Multiplayer>400</Tactical_Build_Cost_Multiplayer>
+        <Tactical_Build_Time_Seconds>10</Tactical_Build_Time_Seconds>
+        <Tactical_Build_Prerequisites/>
+        <Tactical_Production_Queue>Tactical_Units</Tactical_Production_Queue>
+        <!--<Build_Limit_Current_Per_Player>0</Build_Limit_Current_Per_Player>-->
+        <!--<Build_Limit_Lifetime_Per_Player>0</Build_Limit_Lifetime_Per_Player>-->
+        <!--<MULTIPLAYER SKIRMISH VALUES END>-->
+        <Population_Value>1</Population_Value>
+        <Space_Override_Population_Value>6</Space_Override_Population_Value>
+        <Encyclopedia_Unit_Class>AOTR_TACTICAL_POP_REQ_6</Encyclopedia_Unit_Class>
+    </Squadron>
+</FighterUnits>

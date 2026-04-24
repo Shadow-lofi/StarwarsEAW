@@ -1,0 +1,221 @@
+<?xml version="1.0"?>
+
+<GroundVehicles>
+
+    <!-- External Hard Dependencies: Company_Template, Ground_Vehicle_Walker_Big_Template, Action_Transport -->
+    <!-- External Soft Dependencies: Rep_Ground_Medium_Vehicle_Factory -->
+
+    <!-- Unit Definition(s) -->
+	<GroundVehicle Name="AT_TE_Walker">
+		<Variant_Of_Existing_Type>Ground_Vehicle_Walker_Big_Template</Variant_Of_Existing_Type>
+		<Text_ID>TEXT_UNIT_AT_TE_WALKER</Text_ID>
+		<Encyclopedia_Text>
+			AOTR_LAND_CLASS_LRG_VEHICLE
+			AOTR_LAND_ROLE_BREAKTHROUGH_APC
+			AOTR_TEXT_EMPTY
+			TEXT_TOOLTIP_ATTE
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_WEAPONS_AT_TE
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_VH
+			AOTR_LAND_HEALTH_900
+			AOTR_LAND_MOVEMENT_WALKER_GIGANTIC
+			AOTR_LAND_SPEED_5
+			AOTR_LAND_RANGE_700
+			AOTR_LAND_FOW_600
+			AOTR_TEXT_EMPTY
+			AOTR_ABILITY_BRACE
+		</Encyclopedia_Text>
+		<Encyclopedia_Unit_Class>AOTR_LAND_CLASS_LRG_VEHICLE</Encyclopedia_Unit_Class>
+		<Icon_Name>i_button_at_te.tga</Icon_Name>
+
+		<Land_Model_Name>Rep_AT_TE.ALO</Land_Model_Name>
+		<Scale_Factor>1.75</Scale_Factor>
+		
+		<LandBehavior>SQUASH, ABILITY_COUNTDOWN, GARRISON_VEHICLE, WALK_LOCOMOTOR,IDLE,TARGETING, WEAPON, TURRET, POWERED,REVEAL, HIDE_WHEN_FOGGED, UNIT_AI, STUNNABLE, DAMAGE_TRACKING, SQUASH, AFFECTED_BY_SHIELD, TELEKINESIS_TARGET, LURE</LandBehavior>
+
+		<Garrison_Bone_Names>Garrison_00</Garrison_Bone_Names>
+		<Garrison_Category> Infantry, Vehicle </Garrison_Category>
+		<Num_Garrison_Slots>4</Num_Garrison_Slots>
+		<Garrison_Exit_Dist>0</Garrison_Exit_Dist>
+		<Garrison_Enter_Dist>0</Garrison_Enter_Dist>
+		<Garrison_Radius>30</Garrison_Radius>
+		<Deployment_Anim_Rate>1.0</Deployment_Anim_Rate>
+		<Num_Garrison_Guns>0</Num_Garrison_Guns>
+
+		<Cache_Crusher_Boxes>No</Cache_Crusher_Boxes>
+		<Is_Supercrusher>Yes</Is_Supercrusher>
+		<Property_Flags>CanContainGarrison | GiantUnit</Property_Flags>
+
+		<Movement_Animation_Speed> 0.25 </Movement_Animation_Speed>
+		<Rotation_Animation_Speed> 0.5 </Rotation_Animation_Speed>
+
+		<Max_Speed> 0.5 </Max_Speed>
+		<Max_Rate_Of_Turn>0.25</Max_Rate_Of_Turn>
+		<Stopped_Rate_Of_Turn>0.5</Stopped_Rate_Of_Turn>
+
+		<Locomotor_Has_Animation_Priority>yes</Locomotor_Has_Animation_Priority>
+		<Attack_Animation_Is_Overlay>yes</Attack_Animation_Is_Overlay>
+		<Walk_Transition>No</Walk_Transition>
+		<Has_Pre_Turn_Anim>No</Has_Pre_Turn_Anim>
+		<Close_Enough_Angle_For_Move_Start>60</Close_Enough_Angle_For_Move_Start>
+		<Should_Reinforcements_Move> false </Should_Reinforcements_Move>
+		<Cache_Crusher_Boxes>no</Cache_Crusher_Boxes>
+
+		<Space_Layer>Land</Space_Layer>
+		<OccupationStyle>1x1</OccupationStyle>
+		<Custom_Hard_XExtent>26.0</Custom_Hard_XExtent>
+		<Custom_Hard_YExtent>16.0</Custom_Hard_YExtent>
+		<FormationSpacing>1</FormationSpacing>
+		<FormationOrder>2</FormationOrder>
+		<FormationGrouping>Standard</FormationGrouping>
+		<FormationRaggedness>0.5</FormationRaggedness>
+		<MaxJiggleDistance>0</MaxJiggleDistance>
+		<MinimumPushReturnDistance>100</MinimumPushReturnDistance>
+		<MovementPredictionInterval>9.0</MovementPredictionInterval>
+		<MovementBoxExpansionFactor>8.0</MovementBoxExpansionFactor>
+
+		<Deployment_Anim_Rate>1.0</Deployment_Anim_Rate>
+		<Affiliation>Empire</Affiliation>
+
+		<Armor_Type> Armor_Land_Vehicle_Heavy </Armor_Type>
+		<Targeting_Priority_Set>Ground_BigVehicle</Targeting_Priority_Set>
+		<CategoryMask> BigVehicle | AntiStructure | WalkerVehicle </CategoryMask>
+
+		<AI_Combat_Power>700</AI_Combat_Power>
+		<Tactical_Health>4000</Tactical_Health>
+		<Autoresolve_Health>800000</Autoresolve_Health>
+
+		<Land_FOW_Reveal_Range>600.0</Land_FOW_Reveal_Range>
+		<Dense_FOW_Reveal_Range_Multiplier>0.1</Dense_FOW_Reveal_Range_Multiplier>
+		<Targeting_Max_Attack_Distance>650.0</Targeting_Max_Attack_Distance>
+
+		<Target_Bones> COLLISION </Target_Bones>
+
+		<HardPoints>
+			HP_AT_TE_Main_Gun,
+			HP_AT_TE_Blaster_01,
+			HP_AT_TE_Blaster_02,
+			HP_AT_TE_Blaster_03,
+			HP_AT_TE_Blaster_04,
+			HP_AT_TE_Blaster_05,
+			HP_AT_TE_Blaster_06,
+		</HardPoints>
+
+		<Ranged_Target_Z_Adjust>30.0</Ranged_Target_Z_Adjust>
+
+		<Death_SFXEvent_Start_Die>Unit_AT_AT_Death_SFX</Death_SFXEvent_Start_Die>
+		<Play_SFXEvent_On_Sighting>True</Play_SFXEvent_On_Sighting>
+		<SFXEvent_Select>Unit_Select_Clone_Vehicle_Walker</SFXEvent_Select>
+		<SFXEvent_Move>Unit_Move_Clone_Vehicle_Walker</SFXEvent_Move>
+		<SFXEvent_Fleet_Move>Unit_Move_Clone_Vehicle</SFXEvent_Fleet_Move>
+		<SFXEvent_Attack>Unit_Attack_Clone_Vehicle</SFXEvent_Attack>
+		<SFXEvent_Guard>Unit_Guard_Clone_Vehicle</SFXEvent_Guard>
+
+		<SFXEvent_Assist_Move> Unit_Move_Clone_Vehicle_Walker </SFXEvent_Assist_Move>
+		<SFXEvent_Assist_Attack> Unit_Attack_Clone_Vehicle</SFXEvent_Assist_Attack>
+
+		<SFXEvent_Unit_Lost> EHD_ATAT_Destroyed </SFXEvent_Unit_Lost>
+		<SFXEvent_Tactical_Build_Started> EHD_Reinforcements_En_Route </SFXEvent_Tactical_Build_Started>
+		<SFXEvent_Tactical_Build_Complete> EHD_Reinforcements_Available </SFXEvent_Tactical_Build_Complete>
+		<SFXEvent_Tactical_Build_Cancelled> EHD_Reinforcements_Cancelled  </SFXEvent_Tactical_Build_Cancelled>
+
+		<MovementClass>GiganticWalker</MovementClass>
+
+		<Overall_Length>50.0</Overall_Length>		<!-- Hand tweaked for vehicle pitching up and down on terrain -->
+		<Overall_Width>0.0</Overall_Width>		<!-- 0.0 means don't roll left and right on terrain -->
+
+		<GUI_Bracket_Size>2</GUI_Bracket_Size>
+
+		<Weather_Category>LargeWalker</Weather_Category>
+
+		<Land_Damage_Thresholds>1, 0.5, 0.25</Land_Damage_Thresholds>
+		<Land_Damage_Alternates>0, 1, 2</Land_Damage_Alternates>
+		<Land_Damage_SFX>null,SFX_Grenade_Detonation, SFX_Grenade_Detonation</Land_Damage_SFX>
+
+		<Radar_Icon_Size>0.1  0.1</Radar_Icon_Size>
+		<Radar_Icon_Name>I_RADAR_ATTE.tga</Radar_Icon_Name>
+		<Visible_On_Radar_When_Fogged>True</Visible_On_Radar_When_Fogged>
+		<Tactical_Bribe_Cost>4500</Tactical_Bribe_Cost>
+
+		<Lua_Script>Objectscript_Brace</Lua_Script>
+
+		<Unit_Abilities_Data SubObjectList="Yes">
+			<Unit_Ability>
+				<Type>LURE</Type>
+				<Effective_Radius>1</Effective_Radius>
+				<Target_Types/>
+				<Recharge_Seconds>60</Recharge_Seconds>
+				<Expiration_Seconds>20</Expiration_Seconds>
+
+				<Is_Pulsing>Yes</Is_Pulsing>
+				<Pulse_Frequency_Secs>0.5</Pulse_Frequency_Secs>
+				<Max_Number_Of_Pulses>40</Max_Number_Of_Pulses>
+				<Particle_Effect>canderous_lure</Particle_Effect>
+
+				<Mod_Multiplier>TAKE_DAMAGE_MULTIPLIER, 0.33f</Mod_Multiplier>
+				<Mod_Multiplier>SPEED_MULTIPLIER, 0.25f</Mod_Multiplier>
+				<Mod_Multiplier>WEAPON_DELAY_MULTIPLIER, 2.0f</Mod_Multiplier>
+				<SFXEvent_GUI_Unit_Ability_Activated>Unit_Brace_Kadalbe</SFXEvent_GUI_Unit_Ability_Activated>
+				<Alternate_Name_Text>TEXT_TOOLTIP_ABILITY_BRACE_NAME</Alternate_Name_Text>
+				<Alternate_Description_Text>TEXT_TOOLTIP_ABILITY_BRACE_DESCRIPTION</Alternate_Description_Text>
+				<Alternate_Icon_Name>i_sa_brace.tga</Alternate_Icon_Name>
+				<GUI_Activated_Ability_Name>Brace_Black_Market</GUI_Activated_Ability_Name>
+				<Supports_Autofire>True</Supports_Autofire>
+			</Unit_Ability>
+		</Unit_Abilities_Data>
+
+		<Converted_To_Enemy_Die_Time_Seconds>60</Converted_To_Enemy_Die_Time_Seconds>
+	</GroundVehicle>
+
+    <!-- Company Definition(s) -->
+	<GroundCompany Name="Rep_AT_TE_Walker_Company">
+        <Variant_Of_Existing_Type>Company_Template</Variant_Of_Existing_Type>
+        <Text_ID>TEXT_UNIT_AT_TE_WALKER_COMPANY</Text_ID>
+        <Encyclopedia_Text>
+            AOTR_LAND_CLASS_LRG_VEHICLE
+			AOTR_LAND_ROLE_BREAKTHROUGH_APC
+			AOTR_MANUFACTURER_ROTHANA
+			AOTR_TEXT_EMPTY
+            TEXT_TOOLTIP_ATTE
+            AOTR_TEXT_EMPTY
+            AOTR_AMOUNT_1
+            AOTR_LAND_WEAPONS_AT_TE
+			AOTR_TEXT_EMPTY
+			AOTR_LAND_ARMOR_VH
+			AOTR_LAND_HEALTH_900
+			AOTR_LAND_MOVEMENT_WALKER_GIGANTIC
+			AOTR_LAND_SPEED_5
+			AOTR_LAND_RANGE_700
+			AOTR_LAND_FOW_600
+			AOTR_TEXT_EMPTY
+			AOTR_ABILITY_BRACE
+        </Encyclopedia_Text>
+        <Encyclopedia_Unit_Class>AOTR_LAND_CLASS_LRG_VEHICLE</Encyclopedia_Unit_Class>
+        <Icon_Name>I_BUTTON_AT_TE.tga</Icon_Name>
+
+        <Affiliation>Empire</Affiliation>
+        <Build_Cost_Credits>3500</Build_Cost_Credits>
+        <Build_Time_Seconds>1</Build_Time_Seconds>
+        <Required_Special_Structures>Rep_Ground_Medium_Vehicle_Factory</Required_Special_Structures>
+        <Required_Ground_Base_Level>1</Required_Ground_Base_Level>
+        <Required_Star_Base_Level>0</Required_Star_Base_Level>
+        
+
+        <Company_Transport_Unit>Rep_LAATC_AT_TE</Company_Transport_Unit>
+        <Company_Units>
+            AT_TE_Walker
+        </Company_Units>
+        <Formation_Priority>3</Formation_Priority>
+
+        <SFXEvent_Build_Started>EHD_Build_Vehicle</SFXEvent_Build_Started>
+        <SFXEvent_Build_Cancelled>EHD_Vehicle_Canceled</SFXEvent_Build_Cancelled>
+        <SFXEvent_Build_Complete>Unit_Select_AT_AT</SFXEvent_Build_Complete>
+        <SFXEvent_Fleet_Move>Unit_Fleet_Move_AT_AT</SFXEvent_Fleet_Move>
+
+        <Tactical_Build_Cost_Multiplayer>1500</Tactical_Build_Cost_Multiplayer>
+        <Tactical_Build_Time_Seconds>50</Tactical_Build_Time_Seconds>
+        <Tactical_Build_Prerequisites/>
+    </GroundCompany>
+
+</GroundVehicles>
